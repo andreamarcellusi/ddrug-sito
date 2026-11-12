@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block titolo %}HETA Lab · dDRUG UniMi{% endblock %}
+{% block contenuto %}
+<div class="phead hl" id="top">
+  <div class="w">
+    <span class="label">Laboratorio · Health Economics &amp; Technology Assessment</span>
+    <h1>HETA Lab</h1>
+    <blockquote class="motto">{{ h.motto }}</blockquote>
+    <p>{{ h.missione }}</p>
+  </div>
+</div>
+
+<main>
+<section id="domande">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Ricerca</span><h2>Le domande che studiamo</h2></div>
+      <p>{{ h.domande_intro }}</p>
+    </div>
+    <ul class="q qd">
+      {% for d in h.domande %}<li><b>{{ d.titolo }}</b>{{ d.testo }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="feat">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Metodo</span><h2>Come lavoriamo</h2></div>
+      <p>{{ h.metodo_intro }}</p>
+    </div>
+    <ol class="path steps">
+      {% for m in h.metodo %}<li>
+        <span class="n">{{ loop.index }}</span>
+        <h3>{{ m.titolo }}</h3>
+        <p>{{ m.testo }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+    <blockquote class="cit">{{ h.citazione }}</blockquote>
+  </div>
+</section>
+
+<section id="progetti">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Progetti</span><h2>Su cosa stiamo lavorando</h2></div>
+    </div>
+    {% for p in h.progetti %}<article class="course">
+      <div>
+        <span class="label">{{ p.stato }}</span>
+        <h3>{{ p.titolo }}</h3>
+        <p>{{ p.domanda }}</p>
+        {% if p.link %}<a class="more" href="{{ p.link }}">Scheda del progetto →</a>{% endif %}
+      </div>
+      <dl class="cf">
+        {% if p.metodi %}<dt>Metodi</dt><dd>{{ p.metodi }}</dd>{% endif %}
+        {% if p.persone %}<dt>Persone</dt><dd>{{ p.persone|join(", ") }}</dd>{% endif %}
+      </dl>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="feat" id="persone">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Persone</span><h2>Chi lavora nel laboratorio</h2></div>
+    </div>
+    <ul class="q team">
+      {% for p in h.persone %}<li><span class="label">{{ p.ruolo }}</span><b>{% if p.pagina %}<a href="{{ p.pagina }}">{{ p.nome }}</a>{% else %}{{ p.nome }}{% endif %}</b>{{ p.temi }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="output">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Risorse</span><h2>Produzione scientifica</h2></div>
+      <p>{{ h.risorse_intro }}</p>
+    </div>
+    <ul class="q res">
+      {% for r in h.risorse %}<li><b>{{ r.titolo }}</b>{{ r.testo }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="edu" id="didattica">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Didattica e formazione</span><h2>Dove insegniamo</h2></div>
+      <p>{{ h.didattica_intro }}</p>
+    </div>
+    {% for g in h.didattica %}<h3 class="sub">{{ g.gruppo }}</h3>
+    <ul class="courses">
+      {% for v in g.voci %}<li><span class="label">{{ v.dati }}</span>
+        <div><h3>{{ v.titolo }}</h3>{% if v.testo %}<p>{{ v.testo }}</p>{% endif %}</div>
+        {% if v.link %}<a href="{{ v.link }}">{{ "Scheda →" if v.interno else "Scheda UniMi →" }}</a>{% else %}<span></span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="contact" id="collaborazioni">
+  <div class="w">
+    <div>
+      <h2>Collaborazioni, tesi e progetti</h2>
+      <p style="margin-top:16px;color:var(--ink-soft);max-width:52ch">{{ h.collaborazioni }}</p>
+    </div>
+    <dl>
+      <dt>Coordinamento</dt><dd><a href="andrea-marcellusi.html">Andrea Marcellusi</a></dd>
+      <dt>Email</dt><dd>ddrug@unimi.it</dd>
+    </dl>
+  </div>
+</section>
+</main>
+{% endblock %}

@@ -1,0 +1,93 @@
+# Pagina HETA Lab. Contenuti ricavati dalla pagina del vecchio sito
+# (ddrug.unimi.it/research/health-economics-and-technology-assessment-heta-lab/, ultima modifica 2 agosto 2026).
+# I testi sono una riscrittura da approvare; le due citazioni sono riportate come sul vecchio sito.
+# Esclusi per le regole del sito: Nina Di Gregorio (ruolo da indicare) e The Modelling Week (da decidere).
+motto: Il valore di un'innovazione non è soltanto un numero. È una decisione da rendere trasparente.
+missione: HETA Lab è il laboratorio di dDRUG per l'economia sanitaria e l'Health Technology Assessment. Studia come le evidenze cliniche, economiche e di real world possono sostenere decisioni più consapevoli su valore, prezzo, rimborso e accesso alle tecnologie sanitarie.
+domande_intro: Le discipline definiscono il campo. Le domande spiegano perché studiarlo.
+domande:
+- titolo: Come misuriamo il valore di un'innovazione sanitaria?
+  testo: Esiti clinici, costi, qualità della vita e impatto organizzativo, integrati in valutazioni utili alle decisioni.
+- titolo: Come cambiano le valutazioni quando arrivano nuovi dati?
+  testo: Ciclo di vita delle tecnologie, real-world evidence e processi di rivalutazione.
+- titolo: Quali evidenze dovrebbero orientare prezzo, rimborso e accesso?
+  testo: Il rapporto tra evidenze disponibili, comparatori, incertezza e processi decisionali.
+- titolo: Come valutiamo sostenibilità ed equità senza confonderle?
+  testo: Dimensioni tenute distinte, per capire chi beneficia di un'innovazione, a quale costo e con quali conseguenze per il sistema.
+metodo_intro: Una valutazione parte dalla decisione che il modello deve aiutare a comprendere, non dal modello.
+metodo:
+- titolo: Definire la decisione
+  testo: Popolazione, alternative, prospettiva e contesto d'uso.
+- titolo: Rendere visibili dati e incertezza
+  testo: Fonti, assunzioni, limiti, comparatori e variabili che guidano i risultati.
+- titolo: Interpretare le conseguenze
+  testo: Risultati tradotti in implicazioni comprensibili per pazienti, professionisti e decisori.
+citazione: I modelli producono risultati. Le decisioni richiedono ancora qualcuno che li interpreti.
+progetti:
+- titolo: Valutazione economica dell'obesità e delle patologie metaboliche correlate in Italia
+  stato: In corso · avviato il 16 marzo 2026
+  domanda: Qual è il carico clinico ed economico dell'obesità in Italia e quale impatto potranno avere le tecnologie emergenti sul Servizio sanitario nazionale.
+  metodi: Cost-of-illness, HTA, horizon scanning
+  persone: [Andrea Marcellusi, Martina Managò]
+  link: https://ddrug.unimi.it/valutazione-economica-dellobesita-e-delle-patologie-metaboliche-correlate-in-italia/
+persone:
+- nome: Andrea Marcellusi
+  ruolo: Coordinamento scientifico
+  temi: Economia sanitaria, HTA, accesso alle innovazioni e politiche farmaceutiche.
+- nome: Giacomo De Santis
+  ruolo: Post-doc in Market Access
+  temi: Dati di salute e real-world data nella ricerca e nella valutazione sanitaria.
+- nome: Martina Managò
+  ruolo: Dottoranda in Market Access
+  temi: Processi di accesso alle innovazioni e rapporto tra evidenze, valore, prezzo e rimborso.
+risorse_intro: La ricerca deve tradursi in documenti consultabili, confronti pubblici e strumenti per nuove domande.
+risorse:
+- titolo: Working paper
+  testo: Analisi preliminari e lavori in corso.
+- titolo: Presentazioni e poster
+  testo: Contributi a congressi e materiali scientifici.
+- titolo: Workshop e seminari
+  testo: Incontri su metodi e problemi aperti.
+- titolo: Report di progetto
+  testo: Deliverable, report tecnici e risultati applicati.
+didattica_intro: La didattica serve a rendere leggibili metodi, evidenze e decisioni.
+didattica:
+- gruppo: Insegnamenti universitari
+  voci:
+  - titolo: Mercato e gestione dei prodotti in farmacia
+    dati: A.A. 2026/2027 · 8 CFU · 64 ore
+    testo: Market access, modelli economici, processi di acquisto e rimborsabilità, con attenzione ai prodotti gestiti in farmacia.
+    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/mercato-e-gestione-dei-prodotti-farmacia
+  - titolo: Produzione, legislazione e commercializzazione di medicinali biotecnologici
+    dati: A.A. 2026/2027 · 7 CFU · 56 ore
+    testo: Sviluppo, produzione, qualità e requisiti regolatori dei farmaci biotecnologici e delle terapie avanzate.
+    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/produzione-legislazione-e-commercializzazione-di-medicinali-biotecnologici-0
+  - titolo: Mercato farmaceutico e normativa dei prodotti salutari
+    dati: A.A. 2025/2026 · modulo da 4 CFU · 32 ore
+    testo: Mercato farmaceutico, documentazione AIFA, HTA e criteri di negoziazione.
+    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2026/mercato-farmaceutico-e-normativa-dei-prodotti-salutari
+- gruppo: Formazione post-laurea
+  voci:
+  - titolo: "Pharmacoeconomics and Market Access: Strategies and Applications"
+    dati: Dottorato · A.A. 2025/2026 · 2 CFU · 10 ore
+    testo: Corso in inglese per il Dottorato in Scienze Farmaceutiche.
+    link: https://www.unimi.it/it/corsi/corsi-post-laurea-e-formazione-continua/corsi-di-dottorato-phd/catalogo-degli-insegnamenti-la-formazione-dottorale/aa-2025/2026-pharmacoeconomics-and-marked-access-strategies-and-applications
+  - titolo: Strategie regolatorie e valutazioni economiche per l'accesso ai farmaci
+    dati: Corso di perfezionamento · A.A. 2025/2026 · 10 CFU · 60 ore
+    testo: Coordinamento di Andrea Marcellusi. Edizione 2026 dal 3 giugno al 16 luglio.
+    link: formazione.html#strategie-regolatorie-e-valutazioni-economiche-per-l-accesso
+    interno: true
+  - titolo: Scienze regolatorie e accesso al mercato di prodotti ad attività terapeutica e salutare
+    dati: Master di II livello · A.A. 2025/2026
+    testo: "Modulo Il market access di medicinali e dispositivi medici: 4 CFU, 40 ore."
+    link: formazione.html#scienze-regolatorie-e-accesso-al-mercato-di-prodotti-ad-atti
+    interno: true
+- gruppo: Formazione istituzionale e per organizzazioni
+  voci:
+  - titolo: Approfondimenti metodologici sugli ITC nelle valutazioni comparative di tecnologie sanitarie
+    dati: Corso istituzionale AIFA · 12 ore
+    testo: "Tre incontri in presenza sulle evidenze comparative dirette e indirette, con lezioni interattive e casi applicativi: PICO, similarità e transitività, external control arm, MAIC, ML-NMR, network meta-analysis e qualità delle evidenze. Docenti: Carlotta Galeone e Andrea Marcellusi."
+  - titolo: Aziende farmaceutiche e società di consulenza
+    dati: Corsi e relazioni scientifiche
+    testo: HTA, valutazioni economiche, evidenze comparative, real-world data e processi di prezzo, rimborso e accesso. L'attenzione è su qualità dei metodi, trasparenza delle assunzioni e corretta interpretazione delle implicazioni decisionali.
+collaborazioni: Il laboratorio è interessato a collaborazioni scientifiche, progetti multidisciplinari, tesi e percorsi di ricerca su economia sanitaria, HTA e accesso alle innovazioni.

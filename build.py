@@ -75,6 +75,15 @@ def main():
     resa = {out: env.get_template(tpl).render(pagina=nome, **comuni) for out, (tpl, nome) in pagine.items()}
     for out, prof in profili.items():
         resa[out] = env.get_template("persona.html").render(pagina="persona", p=prof, **comuni)
+    heta = carica("heta-lab.yml")
+    visibili = {x["nome"]: x for x in persone}
+    citati = [x["nome"] for x in heta["persone"]] + [n for pr in heta["progetti"] for n in pr.get("persone", [])]
+    assenti = sorted(set(citati) - set(visibili))
+    if assenti:
+        sys.exit(f"heta-lab.yml cita persone non visibili in persone.yml: {assenti}")
+    for x in heta["persone"]:
+        x["pagina"] = visibili[x["nome"]].get("pagina")
+    resa["heta-lab.html"] = env.get_template("heta-lab.html").render(pagina="heta", h=heta, **comuni)
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
