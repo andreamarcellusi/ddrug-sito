@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block titolo %}{{ p.nome }} · dDRUG UniMi{% endblock %}
+{% block contenuto %}
+<div class="phead pp" id="top">
+  <div class="w">
+    {% if p.foto %}<img src="assets/persone/{{ p.foto }}" alt="Ritratto di {{ p.nome }}" width="{{ p.foto_w }}" height="{{ p.foto_h }}">{% endif %}
+    <div>
+      <span class="label">{{ p.ruolo }}{% if p.linea %} · {{ p.linea }}{% endif %}</span>
+      <h1>{{ p.nome }}</h1>
+      {% if p.sintesi %}<p>{{ p.sintesi }}</p>{% endif %}
+    </div>
+  </div>
+</div>
+
+<main>
+<section>
+  <div class="w pbody">
+    <div>
+      {% for s in p.sezioni %}<div class="blk">
+        <h2>{{ s.titolo }}</h2>
+        {% if s.testo %}<p>{{ s.testo }}</p>{% endif %}
+        {% if s.elenco %}<ul class="dq">{% for v in s.elenco %}<li>{{ v }}</li>{% endfor %}</ul>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    <aside>
+      {% if p.email %}<div class="blk">
+        <h2>Contatti</h2>
+        <p><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+      </div>{% endif %}
+      {% if p.incarichi %}<div class="blk">
+        <h2>Nel gruppo</h2>
+        <ul class="dq">{% for i in p.incarichi %}<li>{% if i.link %}<a href="{{ i.link }}">{{ i.testo }}</a>{% else %}{{ i.testo }}{% endif %}</li>{% endfor %}</ul>
+      </div>{% endif %}
+      {% if p.link %}<div class="blk">
+        <h2>Link</h2>
+        <ul class="dq">{% for l in p.link %}<li><a href="{{ l.url }}">{{ l.testo }} →</a></li>{% endfor %}</ul>
+      </div>{% endif %}
+    </aside>
+  </div>
+</section>
+</main>
+{% endblock %}

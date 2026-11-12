@@ -172,7 +172,18 @@ footer a{color:var(--on-band)}
 .cf dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
 .cf dd{margin:0;font-family:var(--display);font-weight:600;font-size:1rem}
 .nota{margin-top:40px;font-size:1rem;color:var(--ink-soft);max-width:70ch}
-@media (max-width: 900px){.course{grid-template-columns:minmax(0,1fr)}}
+.pp .w{display:grid;grid-template-columns:250px minmax(0,1fr);gap:44px;align-items:center}
+.pp img{display:block;width:100%;height:auto;border-radius:3px}
+.pbody{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px 64px;align-items:start}
+.blk{margin-top:44px}
+.blk:first-child{margin-top:0}
+.blk h2{font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);padding-bottom:10px;border-bottom:2px solid var(--ink);margin-bottom:14px}
+.blk p{max-width:62ch}
+.dq{list-style:none;margin:-14px 0 0;padding:0}
+.dq li{padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.3}
+aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overflow-wrap:anywhere}
+.people li a{color:inherit;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+@media (max-width: 900px){.course,.pbody{grid-template-columns:minmax(0,1fr)}.pbody{gap:44px}.pp .w{grid-template-columns:minmax(0,1fr);gap:28px}.pp img{max-width:220px}}
 
 @media (max-width: 900px){
   .hero .w,.head,.feat-grid,.contact .w{grid-template-columns:minmax(0,1fr)}

@@ -114,7 +114,7 @@
       {% for g in gruppi %}<div class="{{ 'wide' if g.largo else '' }}">
         <h3>{{ g.nome }}</h3>
         <ul class="{{ 'cols' if g.largo else '' }}{{ ' alumni' if g.alumni else '' }}">
-          {% for p in g.persone %}<li>{{ p.nome }}{% if p.ruolo and not g.alumni %}<span>{{ p.ruolo }}</span>{% endif %}</li>
+          {% for p in g.persone %}<li>{% if p.pagina %}<a href="{{ p.pagina }}">{{ p.nome }}</a>{% else %}{{ p.nome }}{% endif %}{% if p.ruolo and not g.alumni %}<span>{{ p.ruolo }}</span>{% endif %}</li>
           {% endfor %}
         </ul>
       </div>

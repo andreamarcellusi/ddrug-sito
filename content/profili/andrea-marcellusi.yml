@@ -1,0 +1,29 @@
+# Pagina personale. Testi ricavati dalla pagina del vecchio sito (ddrug.unimi.it/andrea-marcellusi/),
+# da rivedere e approvare dall'interessato. Il ruolo viene da persone.yml.
+nome: Andrea Marcellusi
+foto: marcellusi-andrea.jpg
+sintesi: Economia sanitaria, Health Technology Assessment, farmacoeconomia, accesso ai farmaci, modelli di simulazione e real-world evidence.
+email: andrea.marcellusi@unimi.it
+incarichi:
+- testo: Coordinatore scientifico di HETA Lab
+  link: https://ddrug.unimi.it/research/health-economics-and-technology-assessment-heta-lab/
+- testo: "Coordinatore del corso di perfezionamento Strategie regolatorie e valutazioni economiche per l'accesso ai farmaci"
+  link: formazione.html#strategie-regolatorie-e-valutazioni-economiche-per-l-accesso
+link:
+- testo: Profilo UniMi
+  url: https://www.unimi.it/it/ugov/person/andrea-marcellusi
+- testo: Pubblicazioni (AIR UniMi)
+  url: https://air.unimi.it/cris/rp/rp247933?type=all
+sezioni:
+- titolo: Domande di ricerca
+  elenco:
+  - Come si misura il valore di un'innovazione sanitaria.
+  - Come cambia una valutazione quando arrivano nuovi dati.
+  - Quali evidenze devono guidare le decisioni su prezzo, rimborso e accesso.
+  - Come si distingue una spesa più alta da un accesso più ampio e da una perdita di valore.
+- titolo: Metodo
+  testo: Ogni analisi parte dalla definizione della domanda decisionale, rende esplicite le assunzioni e traduce i risultati in implicazioni per pazienti, clinici, decisori e Servizio sanitario nazionale.
+- titolo: Intelligenza artificiale nella ricerca
+  testo: "Gli strumenti di intelligenza artificiale sono usati a supporto di attività strutturate: estrazione dei dati, revisione indipendente delle evidenze, controllo delle procedure e analisi di riproducibilità. La supervisione resta umana."
+- titolo: Didattica
+  testo: Insegna nei corsi di laurea su mercato e gestione dei prodotti in farmacia, regolamentazione dei prodotti per la salute e medicinali biotecnologici. Contribuisce a dottorati, master e formazione continua, compresa la formazione metodologica per AIFA sui confronti indiretti, e tiene corsi per aziende e società di consulenza su HTA, market access e real-world data.

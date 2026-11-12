@@ -26,6 +26,16 @@ def prepara_corsi(corsi):
         gruppi[i]["corsi"].append(c)
     return [g for g in gruppi if g["corsi"]]
 
+def dimensioni(jpg):
+    """Larghezza e altezza di un JPEG, senza librerie esterne."""
+    d = jpg.read_bytes(); i = 2
+    while i < len(d):
+        m, n = d[i + 1], int.from_bytes(d[i + 2:i + 4], "big")
+        if 0xC0 <= m <= 0xCF and m not in (0xC4, 0xC8, 0xCC):
+            return int.from_bytes(d[i + 7:i + 9], "big"), int.from_bytes(d[i + 5:i + 7], "big")
+        i += 2 + n
+    return "", ""
+
 def carica(nome):
     return yaml.safe_load((R / "content" / nome).read_text(encoding="utf-8"))
 
@@ -35,6 +45,19 @@ def visibile(x):
 def main():
     persone = [p for p in carica("persone.yml")["persone"] if visibile(p) and p.get("gruppo")]
     corsi = [c for c in carica("formazione.yml")["corsi"] if visibile(c) and "verificare" not in c.get("tipo", "").lower()]
+    profili = {}
+    for f in sorted((R / "content" / "profili").glob("*.yml")):
+        prof = yaml.safe_load(f.read_text(encoding="utf-8"))
+        base = next((x for x in persone if x["nome"] == prof["nome"]), None)
+        if base is None:
+            sys.exit(f"Profilo {f.name}: {prof['nome']} non è tra le persone visibili in persone.yml")
+        prof = {**base, **prof}
+        if prof.get("foto"):
+            if not (R / "assets" / "persone" / prof["foto"]).exists():
+                sys.exit(f"Profilo {f.name}: manca la foto assets/persone/{prof['foto']}")
+            prof["foto_w"], prof["foto_h"] = dimensioni(R / "assets" / "persone" / prof["foto"])
+        base["pagina"] = f.stem + ".html"
+        profili[base["pagina"]] = prof
     gruppi = []
     for nome, largo, alumni in GRUPPI:
         membri = [p for p in persone if p["gruppo"] == nome]
@@ -50,6 +73,8 @@ def main():
                   n_giovani=sum(p["gruppo"] in ("Post-doc", "Dottorandi") for p in persone))
     pagine = {"index.html": ("home.html", "home"), "formazione.html": ("formazione.html", "formazione")}
     resa = {out: env.get_template(tpl).render(pagina=nome, **comuni) for out, (tpl, nome) in pagine.items()}
+    for out, prof in profili.items():
+        resa[out] = env.get_template("persona.html").render(pagina="persona", p=prof, **comuni)
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir()
@@ -57,7 +82,7 @@ def main():
         (OUT / out).write_text(html, encoding="utf-8")
     shutil.copytree(R / "assets", OUT / "assets")
     (OUT / ".nojekyll").write_text("")
-    print(f"OK: {len(persone)} persone, {len(corsi)} corsi, {len(pagine)} pagine")
+    print(f"OK: {len(persone)} persone, {len(corsi)} corsi, {len(resa)} pagine")
 
 if __name__ == "__main__":
     main()
