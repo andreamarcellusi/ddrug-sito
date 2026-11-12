@@ -25,9 +25,10 @@ def main():
     sconosciuti = {p["gruppo"] for p in persone} - {g[0] for g in GRUPPI}
     if sconosciuti:
         sys.exit(f"Gruppo non previsto in persone.yml: {sconosciuti}")
+    ricerca = carica("ricerca.yml")
     env = Environment(loader=FileSystemLoader(R / "templates"), autoescape=True)
     html = env.get_template("home.html").render(
-        gruppi=gruppi, corsi=corsi,
+        gruppi=gruppi, corsi=corsi, ricerca=ricerca,
         n_docenti=sum(p["gruppo"] == "Docenti e ricercatori" for p in persone),
         n_giovani=sum(p["gruppo"] in ("Post-doc", "Dottorandi") for p in persone))
     if OUT.exists():

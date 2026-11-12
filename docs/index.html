@@ -85,7 +85,7 @@ section{padding-block:72px}
 /* percorso */
 .path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;position:relative}
 .path::before{content:"";position:absolute;left:0;right:0;top:21px;height:2px;background:var(--line)}
-.path li{position:relative;min-width:0}
+.path > li{position:relative;min-width:0}
 .path .n{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#1F252E;font-family:var(--display);font-weight:800;font-size:17px;box-shadow:0 0 0 8px var(--bg)}
 .path .verb{display:block;margin-top:18px;color:var(--accent-ink)}
 .path h3{font-weight:800;font-size:1.55rem;margin-top:6px;text-transform:uppercase;letter-spacing:.01em;color:var(--navy)}
@@ -93,6 +93,8 @@ section{padding-block:72px}
 .path ul{margin:16px 0 0;padding:14px 0 0;list-style:none;border-top:1px solid var(--line);font-family:var(--display);font-size:15px;font-weight:500;display:grid;gap:7px}
 .path ul a{text-decoration:none}
 .path ul a:hover{text-decoration:underline}
+.path ul.temi{font-weight:600;gap:10px}
+.path ul.temi span{display:block;font-family:var(--text);font-weight:400;font-size:15px;color:var(--ink-soft);margin-top:1px}
 
 /* in evidenza */
 .feat{background:var(--surface);border-block:1px solid var(--line)}
@@ -159,7 +161,7 @@ footer a{color:var(--on-band)}
   .shot figcaption{padding-left:140px}
   .path{grid-template-columns:minmax(0,1fr);gap:40px}
   .path::before{left:21px;right:auto;top:0;bottom:0;width:2px;height:auto}
-  .path li{padding-left:66px}
+  .path > li{padding-left:66px}
   .path .n{position:absolute;left:0;top:0}
   .path .verb{margin-top:0;padding-top:12px}
   .people{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -222,7 +224,7 @@ footer a{color:var(--on-band)}
   <div class="w">
     <div class="head">
       <div><span class="label">Ricerca</span><h2>Tre competenze sullo stesso percorso</h2></div>
-      <p>Un medicinale arriva al paziente solo se funziona come forma farmaceutica, se rispetta le regole e se il suo valore è dimostrato. Il gruppo lavora su tutti e tre i passaggi.</p>
+      <p>Nato dalla tecnologia farmaceutica e dalle scienze regolatorie, il dDRUG è passato dalla progettazione delle forme farmaceutiche e dalla valutazione della qualità alle piattaforme avanzate di drug delivery. Integrando scienza formulativa, affari regolatori e, più di recente, economia sanitaria, il gruppo punta a tradurre l'innovazione farmaceutica in valore terapeutico sostenibile.</p>
     </div>
     <ol class="path">
       <li>
@@ -230,6 +232,15 @@ footer a{color:var(--on-band)}
         <span class="label verb">Progettare</span>
         <h3>Drug Delivery</h3>
         <p>Progettazione, sviluppo, produzione e controllo di qualità di forme farmaceutiche e sistemi di rilascio, compresi i farmaci complessi: proteine, nanocarrier e sistemi colloidali.</p>
+        <ul class="temi" aria-label="Temi di ricerca">
+          <li>Preparazioni oromucosali<span>film orodispersibili, forme mucoadesive, liofilizzati orali</span></li>
+          <li>Iniettabili a lunga durata d&#39;azione e chemioembolizzazione</li>
+          <li>Vettori non virali e nanocarrier bioispirati</li>
+          <li>Nanocarrier per la somministrazione transdermica e transmucosale</li>
+          <li>Sistemi transdermici</li>
+          <li>Cosmetici</li>
+          
+        </ul>
         <ul>
           <li><a href="https://ddrug.unimi.it/workshop-27-28-novembre-2024/">Workshop Complex Drugs, accademia e industria</a></li>
         </ul>
@@ -239,6 +250,10 @@ footer a{color:var(--on-band)}
         <span class="label verb">Autorizzare</span>
         <h3>Regulatory Affairs</h3>
         <p>Le regole che accompagnano medicinali, dispositivi medici, cosmetici e integratori lungo il ciclo di vita: qualità, efficacia, sicurezza e immissione in commercio.</p>
+        <ul class="temi" aria-label="Temi di ricerca">
+          <li>Gestione delle variazioni post-marketing<span>mezzi biorilevanti, modelli in vitro per la stima della permeabilità, saggi tecnologici</span></li>
+          
+        </ul>
         <ul>
           <li><a href="https://ddrug.unimi.it/research/projects/">Digital therapeutics: UE e India a confronto</a></li>
         </ul>
@@ -248,6 +263,13 @@ footer a{color:var(--on-band)}
         <span class="label verb">Valutare</span>
         <h3>Health Economics</h3>
         <p>Come le evidenze cliniche, economiche e di real world sostengono le decisioni su valore, prezzo, rimborso e accesso alle tecnologie sanitarie.</p>
+        <ul class="temi" aria-label="Temi di ricerca">
+          <li>Analisi economica delle tecnologie sanitarie</li>
+          <li>Politica sanitaria e regolazione</li>
+          <li>Modelli predittivi e valutazione di impatto</li>
+          <li>Il ruolo del farmacista</li>
+          
+        </ul>
         <ul>
           <li><a href="https://ddrug.unimi.it/research/health-economics-and-technology-assessment-heta-lab/">HETA Lab</a></li>
         </ul>

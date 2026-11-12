@@ -1,0 +1,31 @@
+# Temi di ricerca per linea. Fonte: presentazione del gruppo "presentazione_DDRUG_26_6.pptx"
+# (titoli tradotti dall'inglese). "persone" = gruppo di lavoro indicato nella slide del tema:
+# per ora non compare in home, servirà per le pagine Ricerca e Persone.
+drug_delivery:
+  temi:
+  - titolo: Preparazioni oromucosali
+    dettaglio: film orodispersibili, forme mucoadesive, liofilizzati orali
+    persone: [Francesco Cilurzo, Paola Minghetti, Francesca Selmin, Umberto M. Musazzi, Chiara Meazzini]
+  - titolo: Iniettabili a lunga durata d'azione e chemioembolizzazione
+    persone: [Francesca Selmin, Francesco Cilurzo, Silvia Franzè]
+  - titolo: Vettori non virali e nanocarrier bioispirati
+    persone: [Silvia Franzè, Francesco Cilurzo, Giulia Anderluzzi, Marta Medeo, Viola Bertolotti, Teodora Dal Buono]
+  - titolo: Nanocarrier per la somministrazione transdermica e transmucosale
+    persone: [Francesco Cilurzo, Silvia Franzè, Umberto M. Musazzi, Antonella Casiraghi]
+  - titolo: Sistemi transdermici
+    persone: [Francesco Cilurzo, Paola Minghetti, Antonella Casiraghi, Chiara Gennari, Umberto M. Musazzi]
+  - titolo: Cosmetici
+    persone: [Antonella Casiraghi, Paola Minghetti]
+regulatory:
+  # Nella presentazione gli altri temi regolatori sono ancora segnaposto ("AAAAA"): da completare.
+  # Gruppo di lavoro della linea (slide 13-14): Minghetti, Musazzi, Rocco, Azari, Pagella.
+  temi:
+  - titolo: Gestione delle variazioni post-marketing
+    dettaglio: mezzi biorilevanti, modelli in vitro per la stima della permeabilità, saggi tecnologici
+    persone: [Umberto M. Musazzi, Paola Minghetti, Francesco Cilurzo, Francesca Selmin]
+health_economics:
+  temi:
+  - titolo: Analisi economica delle tecnologie sanitarie
+  - titolo: Politica sanitaria e regolazione
+  - titolo: Modelli predittivi e valutazione di impatto
+  - titolo: Il ruolo del farmacista
