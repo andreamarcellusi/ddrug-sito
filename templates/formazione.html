@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titolo %}Formazione post-laurea · dDRUG UniMi{% endblock %}
+{% block contenuto %}
+<div class="phead" id="top">
+  <div class="w">
+    <span class="label">Formazione post-laurea</span>
+    <h1>Master e corsi</h1>
+    <p>Percorsi per laureati e professionisti dell'industria, della farmacia e delle istituzioni.</p>
+  </div>
+</div>
+
+<main>
+<section>
+  <div class="w">
+    {% for g in gruppi_corsi %}<div class="cgroup">
+      <h2>{{ g.nome }}</h2>
+      {% for c in g.corsi %}<article class="course" id="{{ c.slug }}">
+        <div>
+          <span class="label">{{ c.tipo }}{% if c.anno %} · {{ c.anno }}{% endif %}</span>
+          <h3>{{ c.titolo }}</h3>
+          {% if c.descrizione %}<p>{{ c.descrizione }}</p>{% endif %}
+          {% if c.link %}<a class="more" href="{{ c.link }}">Scheda e iscrizione →</a>{% endif %}
+        </div>
+        {% if c.dati %}<dl class="cf">
+          {% for k, v in c.dati %}<dt>{{ k }}</dt><dd>{{ v }}</dd>
+          {% endfor %}
+        </dl>{% endif %}
+      </article>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    <p class="nota">Dove non è indicata una nuova edizione, date e crediti si riferiscono all'ultima svolta. Per informazioni: ddrug@unimi.it</p>
+  </div>
+</section>
+</main>
+{% endblock %}

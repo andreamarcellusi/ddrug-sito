@@ -55,7 +55,7 @@ p{margin:0}
 .brand b{font-family:var(--display);font-weight:800;font-size:15px;line-height:1.08;letter-spacing:.02em;text-transform:uppercase}
 .nav{display:flex;flex-wrap:wrap;gap:4px 22px;font-family:var(--display);font-weight:600;font-size:15.5px}
 .nav a{color:var(--on-band);text-decoration:none;padding-block:6px;border-bottom:2px solid transparent}
-.nav a:hover{border-bottom-color:var(--accent)}
+.nav a:hover,.nav a[aria-current]{border-bottom-color:var(--accent)}
 
 /* apertura */
 .hero{background:var(--band);color:var(--on-band);border-bottom:6px solid var(--accent)}
@@ -154,6 +154,26 @@ footer{background:var(--band-deep);color:var(--on-band-soft);font-family:var(--d
 footer .w{padding-block:26px;display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
 footer a{color:var(--on-band)}
 
+/* pagine interne */
+.phead{background:var(--band);color:var(--on-band);border-bottom:6px solid var(--accent)}
+.phead .w{padding-block:40px 52px}
+.phead .label{color:var(--accent)}
+.phead h1{font-weight:800;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1;margin-top:14px;letter-spacing:-.02em}
+.phead p{margin-top:18px;font-size:1.15rem;line-height:1.45;color:var(--on-band-soft);max-width:60ch}
+.cgroup{margin-top:64px}
+.cgroup:first-child{margin-top:0}
+.cgroup > h2{font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.course{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:20px 56px;padding:28px 0;border-bottom:1px solid var(--line);scroll-margin-top:20px}
+.course .label{color:var(--ink-soft)}
+.course h3{font-size:1.5rem;font-weight:800;line-height:1.15;margin-top:8px;color:var(--navy)}
+.course p{margin-top:10px;color:var(--ink-soft);max-width:58ch}
+.course .more{margin-top:16px}
+.cf{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 20px;align-content:start}
+.cf dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);padding-top:3px}
+.cf dd{margin:0;font-family:var(--display);font-weight:600;font-size:1rem}
+.nota{margin-top:40px;font-size:1rem;color:var(--ink-soft);max-width:70ch}
+@media (max-width: 900px){.course{grid-template-columns:minmax(0,1fr)}}
+
 @media (max-width: 900px){
   .hero .w,.head,.feat-grid,.contact .w{grid-template-columns:minmax(0,1fr)}
   .hero .w{gap:36px;padding-block:32px 72px}
@@ -185,19 +205,20 @@ footer a{color:var(--on-band)}
 
 <header class="top">
   <div class="w">
-    <a class="brand" href="#top" aria-label="dDRUG, pagina iniziale">
+    <a class="brand" href="index.html" aria-label="dDRUG, pagina iniziale">
       <img src="assets/ddrug-mark.png" alt="">
       <b>Drug Delivery &amp;<br>Regulatory Affairs<br>UniMi Group</b>
     </a>
     <nav class="nav" aria-label="Sezioni">
-      <a href="#ricerca">Ricerca</a>
-      <a href="#persone">Persone</a>
-      <a href="#formazione">Formazione</a>
-      <a href="#news">News</a>
-      <a href="#contatti">Contatti</a>
+      <a href="index.html#ricerca">Ricerca</a>
+      <a href="index.html#persone">Persone</a>
+      <a href="formazione.html">Formazione</a>
+      <a href="index.html#news">News</a>
+      <a href="index.html#contatti">Contatti</a>
     </nav>
   </div>
 </header>
+
 
 <div class="hero" id="top">
   <div class="w">
@@ -384,19 +405,19 @@ footer a{color:var(--on-band)}
     <ul class="courses">
       <li><span class="label">Master di II livello</span>
         <div><h3>Scienze regolatorie e accesso al mercato di prodotti ad attività terapeutica e salutare</h3><p>Medicinali, dispositivi medici, cosmetici e integratori. Lezioni online, esercitazioni in presenza, tirocinio in azienda.</p></div>
-        <a href="https://ddrug.unimi.it/post-lauream/master/">Scheda →</a></li>
+        <a href="formazione.html#scienze-regolatorie-e-accesso-al-mercato-di-prodotti-ad-atti">Scheda →</a></li>
       <li><span class="label">Executive Master</span>
         <div><h3>Clinical Pharmacy</h3></div>
-        <a href="https://ddrug.unimi.it/post-lauream/executive-master-in-clinical-pharmacy/">Scheda →</a></li>
+        <a href="formazione.html#clinical-pharmacy">Scheda →</a></li>
       <li><span class="label">Corso di perfezionamento</span>
         <div><h3>Strategie regolatorie e valutazioni economiche per l&#39;accesso ai farmaci</h3><p>Il percorso regolatorio ed economico che porta un medicinale dall&#39;autorizzazione al paziente.</p></div>
-        <a href="https://ddrug.unimi.it/post-lauream/strategie-regolatorie-e-valutazioni-economiche-per-laccesso-ai-farmaci/">Scheda →</a></li>
+        <a href="formazione.html#strategie-regolatorie-e-valutazioni-economiche-per-l-accesso">Scheda →</a></li>
       <li><span class="label">Corso di aggiornamento</span>
         <div><h3>Dispositivi medici, cosmetici e integratori alimentari: aspetti regolatori</h3></div>
-        <a href="https://ddrug.unimi.it/post-lauream/dispositivi-medici-cosmetici-e-integratori-alimentari-aspetti-regolatori/">Scheda →</a></li>
+        <a href="formazione.html#dispositivi-medici-cosmetici-e-integratori-alimentari-aspett">Scheda →</a></li>
       <li><span class="label">Aggiornamento professionale</span>
         <div><h3>Un percorso per il farmacista preparatore</h3><p>Corso teorico-pratico per i farmacisti che allestiscono preparazioni galeniche.</p></div>
-        <a href="https://ddrug.unimi.it/post-lauream/aggiornamento-professionale/">Scheda →</a></li>
+        <a href="formazione.html#un-percorso-per-il-farmacista-preparatore">Scheda →</a></li>
       
     </ul>
   </div>
@@ -427,6 +448,7 @@ footer a{color:var(--on-band)}
   </div>
 </section>
 </main>
+
 
 <footer>
   <div class="w">
