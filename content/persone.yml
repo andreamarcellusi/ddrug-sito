@@ -1,0 +1,117 @@
+persone:
+- nome: Paola Minghetti
+  ruolo: Professoressa ordinaria
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Francesco Cilurzo
+  ruolo: Professore ordinario
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Francesca Selmin
+  ruolo: Professoressa associata
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Chiara Gennari
+  ruolo: Professoressa associata
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Silvia Franzè
+  ruolo: Professoressa associata
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Umberto M. Musazzi
+  ruolo: Professore associato
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Antonella Casiraghi
+  ruolo: Professoressa associata
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Andrea Marcellusi
+  ruolo: Professore associato
+  gruppo: Docenti e ricercatori
+  linea: Health Economics
+  temi: Economia sanitaria, HTA, accesso alle innovazioni, politica farmaceutica
+  mostra: sì
+  note: Coordinatore scientifico HETA Lab
+- nome: Giulia Anderluzzi
+  ruolo: Ricercatrice tenure-track
+  gruppo: Docenti e ricercatori
+  mostra: sì
+- nome: Chiara Meazzini
+  ruolo: Post-doc
+  gruppo: Post-doc
+  mostra: sì
+- nome: Paolo Rocco
+  ruolo: Post-doc
+  gruppo: Post-doc
+  mostra: sì
+- nome: Giacomo De Santis
+  ruolo: Post-doc in Market Access
+  gruppo: Post-doc
+  linea: Health Economics
+  temi: Health e real-world data nella ricerca e nella valutazione sanitaria
+  mostra: sì
+  note: 'Citato nella pagina HETA Lab ma non nella pagina People: verificare'
+- nome: Marta Medeo
+  ruolo: Dottoranda
+  gruppo: Dottorandi
+  mostra: sì
+- nome: Viola Bertolotti
+  ruolo: Dottoranda
+  gruppo: Dottorandi
+  mostra: sì
+- nome: Valentina Pagella
+  ruolo: Dottoranda
+  gruppo: Dottorandi
+  mostra: sì
+- nome: Sara Azari
+  ruolo: Dottoranda
+  gruppo: Dottorandi
+  mostra: sì
+- nome: Teodora Dal Buono
+  ruolo: Dottoranda
+  gruppo: Dottorandi
+  mostra: sì
+- nome: Martina Managò
+  ruolo: Dottoranda in Market Access
+  gruppo: Dottorandi
+  linea: Health Economics
+  temi: Processi di accesso, rapporto tra evidenze, valore, prezzo e rimborso
+  mostra: sì
+- nome: Nina Di Gregorio
+  mostra: da decidere
+  note: 'Citata nel progetto obesità: ruolo da indicare'
+- nome: Ilaria Franceschini
+  gruppo: Alumni
+  mostra: sì
+- nome: Khalid Garba Mohammed
+  gruppo: Alumni
+  mostra: sì
+- nome: Gaia M.G. Quaroni
+  gruppo: Alumni
+  mostra: sì
+- nome: Giulia Magri
+  gruppo: Alumni
+  mostra: sì
+- nome: Francesco Rama
+  gruppo: Alumni
+  mostra: sì
+- nome: Beatrice Lascu
+  gruppo: Alumni
+  mostra: sì
+- nome: Paola Volontè
+  gruppo: Alumni
+  mostra: sì
+- nome: Giorgia Frigerio
+  gruppo: Alumni
+  mostra: sì
+- nome: Camilla Pozza
+  gruppo: Alumni
+  mostra: sì
+- nome: Sara Manellari
+  gruppo: Alumni
+  mostra: sì
+- nome: Elisa Vettorato
+  gruppo: Alumni
+  mostra: sì

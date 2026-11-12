@@ -1,0 +1,47 @@
+corsi:
+- titolo: Scienze regolatorie e accesso al mercato di prodotti ad attività terapeutica e salutare
+  tipo: Master di II livello
+  anno: 2025/2026
+  coordinatore: Antonella Casiraghi
+  cfu: '60'
+  descrizione: Medicinali, dispositivi medici, cosmetici e integratori. Lezioni online, esercitazioni in presenza, tirocinio in azienda.
+  link: https://ddrug.unimi.it/post-lauream/master/
+  mostra: sì
+- titolo: Clinical Pharmacy
+  tipo: Executive Master
+  partner: SIFAC
+  link: https://ddrug.unimi.it/post-lauream/executive-master-in-clinical-pharmacy/
+  mostra: sì
+- titolo: Strategie regolatorie e valutazioni economiche per l'accesso ai farmaci
+  tipo: Corso di perfezionamento
+  anno: 2025/2026
+  coordinatore: Andrea Marcellusi
+  cfu: '10'
+  ore: '60'
+  date: 3 giugno - 16 luglio 2026
+  descrizione: Il percorso regolatorio ed economico che porta un medicinale dall'autorizzazione al paziente.
+  link: https://ddrug.unimi.it/post-lauream/strategie-regolatorie-e-valutazioni-economiche-per-laccesso-ai-farmaci/
+  mostra: sì
+- titolo: Progettazione e produzione di forme farmaceutiche sterili
+  tipo: Da verificare
+  descrizione: Aspetti teorici in compliance con le norme tecniche.
+  link: https://ddrug.unimi.it/post-lauream/progettazione-e-produzione-di-forme-farmaceutiche-sterili-aspetti-teorici-in-compliance-con-le-norme-tecniche/
+  mostra: sì
+- titolo: 'Dispositivi medici, cosmetici e integratori alimentari: aspetti regolatori'
+  tipo: Corso di aggiornamento
+  partner: AFI
+  link: https://ddrug.unimi.it/post-lauream/dispositivi-medici-cosmetici-e-integratori-alimentari-aspetti-regolatori/
+  mostra: sì
+- titolo: Un percorso per il farmacista preparatore
+  tipo: Aggiornamento professionale
+  partner: SIFAP
+  descrizione: Corso teorico-pratico per i farmacisti che allestiscono preparazioni galeniche.
+  link: https://ddrug.unimi.it/post-lauream/aggiornamento-professionale/
+  mostra: sì
+- titolo: 'The Modelling Week: dalla teoria alla pratica delle valutazioni economiche'
+  tipo: Corso intensivo
+  anno: '2026'
+  coordinatore: Andrea Marcellusi
+  date: 30 settembre - 2 ottobre 2026
+  link: https://registration.3psolution.it/Login.asp?IDcommessa=26_54NE&Lang=IT
+  mostra: da decidere

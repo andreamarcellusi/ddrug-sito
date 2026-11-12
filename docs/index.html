@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Drug Delivery & Regulatory Affairs: gruppo di ricerca del Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano.">
+<link rel="icon" href="assets/ddrug-mark.png">
+<title>dDRUG UniMi</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: fascia ardesia in apertura (foto del gruppo + sigillo tondo), poi il percorso del farmaco
+   in tre tappe collegate da una linea; il resto sono elenchi tipografici su fondo chiaro. */
+:root{
+  --band:#303D4E; --band-deep:#1F252E; --on-band:#F3F5F8; --on-band-soft:#B9C3D0; --band-line:#4A586B;
+  --bg:#F5F6F8; --surface:#FFFFFF; --ink:#1F2733; --ink-soft:#56616F; --line:#D9DEE5;
+  --accent:#E26537; --accent-ink:#B4461B; --navy:#1F3564;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --text:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --band:#262F3C; --band-deep:#151A21; --on-band:#F3F5F8; --on-band-soft:#AEB9C7; --band-line:#3D4959;
+    --bg:#171C24; --surface:#202834; --ink:#E9EDF2; --ink-soft:#A3AEBB; --line:#35404E;
+    --accent:#EC7445; --accent-ink:#F29A74; --navy:#9DB4E6; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --band:#262F3C; --band-deep:#151A21; --on-band:#F3F5F8; --on-band-soft:#AEB9C7; --band-line:#3D4959;
+  --bg:#171C24; --surface:#202834; --ink:#E9EDF2; --ink-soft:#A3AEBB; --line:#35404E;
+  --accent:#EC7445; --accent-ink:#F29A74; --navy:#9DB4E6; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:2px}
+.w{max-width:var(--wrap);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+.label{font-family:var(--mono);font-size:12.5px;letter-spacing:.09em;text-transform:uppercase}
+
+/* barre alte */
+.proto{background:var(--accent);color:#1F252E;font-family:var(--mono);font-size:12.5px}
+.proto .w{padding-block:7px}
+.ateneo{background:var(--band-deep);color:var(--on-band-soft);font-family:var(--display);font-size:14px;font-weight:500}
+.ateneo .w{padding-block:9px;display:flex;gap:6px 18px;flex-wrap:wrap;justify-content:space-between}
+.ateneo a{color:var(--on-band)}
+
+/* testata */
+.top{background:var(--band);color:var(--on-band)}
+.top .w{padding-block:18px;display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--accent);min-width:0}
+.brand img{width:54px;height:auto;flex:none}
+.brand b{font-family:var(--display);font-weight:800;font-size:15px;line-height:1.08;letter-spacing:.02em;text-transform:uppercase}
+.nav{display:flex;flex-wrap:wrap;gap:4px 22px;font-family:var(--display);font-weight:600;font-size:15.5px}
+.nav a{color:var(--on-band);text-decoration:none;padding-block:6px;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:var(--accent)}
+
+/* apertura */
+.hero{background:var(--band);color:var(--on-band);border-bottom:6px solid var(--accent)}
+.hero .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:48px;align-items:center;padding-block:44px 64px}
+.hero .label{color:var(--accent)}
+.hero h1{font-weight:800;font-size:clamp(2.3rem,5.2vw,4.1rem);line-height:.98;margin-top:16px;letter-spacing:-.025em}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lede{margin-top:22px;font-size:1.22rem;line-height:1.45;color:var(--on-band);max-width:34ch}
+.facts{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 28px;font-family:var(--mono);font-size:13.5px;color:var(--on-band-soft)}
+.facts b{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--on-band);margin-right:7px;font-variant-numeric:tabular-nums}
+.shot{position:relative;min-width:0}
+.shot img.ph{display:block;width:100%;height:auto;border-radius:3px}
+.shot .seal{position:absolute;left:-34px;bottom:-40px;width:148px;height:148px;border-radius:50%;background:#fff;padding:5px;box-shadow:0 0 0 5px var(--band)}
+.shot .seal img{display:block;width:100%;height:100%;border-radius:50%;animation:spin 80s linear infinite}
+.shot .seal::after{content:"";position:absolute;inset:27%;border-radius:50%;background:#fff url("assets/ddrug-mark.png") center/78% no-repeat}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.shot .seal img{animation:none}}
+.shot figcaption{margin-top:12px;text-align:right;font-family:var(--mono);font-size:12.5px;color:var(--on-band-soft)}
+
+/* sezioni */
+section{padding-block:72px}
+.head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:16px 48px;align-items:end;margin-bottom:40px}
+.head .label{color:var(--accent-ink)}
+.head h2{font-weight:800;font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.02;margin-top:10px}
+.head p{color:var(--ink-soft);max-width:56ch}
+
+/* percorso */
+.path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;position:relative}
+.path::before{content:"";position:absolute;left:0;right:0;top:21px;height:2px;background:var(--line)}
+.path li{position:relative;min-width:0}
+.path .n{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#1F252E;font-family:var(--display);font-weight:800;font-size:17px;box-shadow:0 0 0 8px var(--bg)}
+.path .verb{display:block;margin-top:18px;color:var(--accent-ink)}
+.path h3{font-weight:800;font-size:1.55rem;margin-top:6px;text-transform:uppercase;letter-spacing:.01em;color:var(--navy)}
+.path p{margin-top:12px}
+.path ul{margin:16px 0 0;padding:14px 0 0;list-style:none;border-top:1px solid var(--line);font-family:var(--display);font-size:15px;font-weight:500;display:grid;gap:7px}
+.path ul a{text-decoration:none}
+.path ul a:hover{text-decoration:underline}
+
+/* in evidenza */
+.feat{background:var(--surface);border-block:1px solid var(--line)}
+.feat-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px}
+.heta h3{font-size:1.9rem;font-weight:800;margin-top:10px}
+.heta blockquote{margin:18px 0 0;padding:0;font-size:1.5rem;line-height:1.3;font-style:italic;color:var(--navy);max-width:26ch}
+.heta p.x{margin-top:16px;color:var(--ink-soft);max-width:54ch}
+.q{margin:26px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 28px}
+.q li{border-top:2px solid var(--accent);padding-top:10px;font-size:1rem;line-height:1.4}
+.q b{display:block;font-family:var(--display);font-weight:700;font-size:15.5px;margin-bottom:3px}
+.more{display:inline-block;margin-top:26px;font-family:var(--display);font-weight:700;font-size:15.5px}
+.side{display:grid;gap:28px;align-content:start}
+.proj{border-left:3px solid var(--line);padding-left:18px}
+.proj .label{color:var(--ink-soft)}
+.proj h4{font-size:1.15rem;font-weight:700;line-height:1.2;margin-top:6px}
+.proj p{margin-top:8px;font-size:1rem;color:var(--ink-soft)}
+.proj a{font-family:var(--display);font-weight:600;font-size:15px;display:inline-block;margin-top:8px}
+
+/* persone */
+.people{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:36px 32px}
+.people h3{font-family:var(--mono);font-weight:500;font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.people ul{list-style:none;margin:0;padding:0}
+.people li{padding:10px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:600;font-size:16.5px;line-height:1.25}
+.people li span{display:block;font-family:var(--text);font-weight:400;font-size:15px;color:var(--ink-soft)}
+.people .wide{grid-column:span 2}
+.people .cols{columns:2;column-gap:32px}
+.people .cols li{break-inside:avoid}
+.people .alumni li{break-inside:avoid;font-weight:500}
+
+/* formazione */
+.edu{background:var(--band);color:var(--on-band)}
+.edu .head .label{color:var(--accent)}
+.edu .head p{color:var(--on-band-soft)}
+.courses{list-style:none;margin:0;padding:0;border-top:1px solid var(--band-line)}
+.courses li{display:grid;grid-template-columns:210px minmax(0,1fr) auto;gap:8px 28px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--band-line)}
+.courses .label{color:var(--accent)}
+.courses h3{font-size:1.2rem;font-weight:700;line-height:1.22}
+.courses p{font-size:1rem;color:var(--on-band-soft);margin-top:5px;max-width:62ch}
+.courses a{color:var(--on-band);font-family:var(--display);font-weight:600;font-size:15px;white-space:nowrap}
+
+/* news */
+.news{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.news article{border-top:2px solid var(--ink);padding-top:14px;min-width:0}
+.news .label{color:var(--ink-soft)}
+.news h3{font-size:1.25rem;font-weight:700;line-height:1.2;margin-top:8px}
+.news p{margin-top:8px;color:var(--ink-soft);font-size:1rem}
+.news a{display:inline-block;margin-top:10px;font-family:var(--display);font-weight:600;font-size:15px}
+
+/* contatti e piede */
+.contact{background:var(--surface);border-top:1px solid var(--line)}
+.contact .w{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:center}
+.contact h2{font-weight:800;font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.02}
+.contact dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px 22px}
+.contact dt{font-family:var(--mono);font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-soft);padding-top:4px}
+.contact dd{margin:0;font-family:var(--display);font-weight:600;font-size:1.1rem;user-select:all;overflow-wrap:anywhere}
+footer{background:var(--band-deep);color:var(--on-band-soft);font-family:var(--display);font-size:14px}
+footer .w{padding-block:26px;display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+footer a{color:var(--on-band)}
+
+@media (max-width: 900px){
+  .hero .w,.head,.feat-grid,.contact .w{grid-template-columns:minmax(0,1fr)}
+  .hero .w{gap:36px;padding-block:32px 72px}
+  .shot .seal{left:12px;width:120px;height:120px;bottom:-34px}
+  .shot figcaption{padding-left:140px}
+  .path{grid-template-columns:minmax(0,1fr);gap:40px}
+  .path::before{left:21px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .path li{padding-left:66px}
+  .path .n{position:absolute;left:0;top:0}
+  .path .verb{margin-top:0;padding-top:12px}
+  .people{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .news{grid-template-columns:minmax(0,1fr)}
+  .courses li{grid-template-columns:minmax(0,1fr)}
+  section{padding-block:52px}
+}
+@media (max-width: 540px){
+  body{font-size:17px}
+  .people{grid-template-columns:minmax(0,1fr)}
+  .people .wide{grid-column:auto}
+  .q{grid-template-columns:minmax(0,1fr)}
+  .people .cols{columns:1}
+}
+</style>
+</head>
+<body>
+
+
+<div class="ateneo"><div class="w"><span>Università degli Studi di Milano</span><span>Dipartimento di Scienze Farmaceutiche (DiSFarm)</span></div></div>
+
+<header class="top">
+  <div class="w">
+    <a class="brand" href="#top" aria-label="dDRUG, pagina iniziale">
+      <img src="assets/ddrug-mark.png" alt="">
+      <b>Drug Delivery &amp;<br>Regulatory Affairs<br>UniMi Group</b>
+    </a>
+    <nav class="nav" aria-label="Sezioni">
+      <a href="#ricerca">Ricerca</a>
+      <a href="#persone">Persone</a>
+      <a href="#formazione">Formazione</a>
+      <a href="#news">News</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="w">
+    <div>
+      <span class="label">Gruppo di ricerca · DiSFarm · UniMi</span>
+      <h1>Il farmaco, dalla <em>formulazione</em> all'<em>accesso</em>.</h1>
+      <p class="lede">dDRUG studia come un medicinale si progetta, come viene autorizzato e quanto vale per chi lo usa e per chi lo paga.</p>
+      <div class="facts">
+        <span><b>9</b>docenti e ricercatori</span>
+        <span><b>9</b>dottorandi e post-doc</span>
+        <span><b>5</b>percorsi post-laurea</span>
+      </div>
+    </div>
+    <figure class="shot" style="margin:0">
+      <img class="ph" src="assets/gruppo.jpg" alt="Foto di gruppo del dDRUG: una trentina di persone tra docenti, ricercatori e studenti, in piedi e accovacciate, davanti a una lavagna bianca." width="1205" height="845">
+      <div class="seal" aria-hidden="true"><img src="assets/ddrug-ring.jpg" alt=""></div>
+      <figcaption>Il gruppo dDRUG</figcaption>
+    </figure>
+  </div>
+</div>
+
+<main>
+<section id="ricerca">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Ricerca</span><h2>Tre competenze sullo stesso percorso</h2></div>
+      <p>Un medicinale arriva al paziente solo se funziona come forma farmaceutica, se rispetta le regole e se il suo valore è dimostrato. Il gruppo lavora su tutti e tre i passaggi.</p>
+    </div>
+    <ol class="path">
+      <li>
+        <span class="n">1</span>
+        <span class="label verb">Progettare</span>
+        <h3>Drug Delivery</h3>
+        <p>Progettazione, sviluppo, produzione e controllo di qualità di forme farmaceutiche e sistemi di rilascio, compresi i farmaci complessi: proteine, nanocarrier e sistemi colloidali.</p>
+        <ul>
+          <li><a href="https://ddrug.unimi.it/workshop-27-28-novembre-2024/">Workshop Complex Drugs, accademia e industria</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="n">2</span>
+        <span class="label verb">Autorizzare</span>
+        <h3>Regulatory Affairs</h3>
+        <p>Le regole che accompagnano medicinali, dispositivi medici, cosmetici e integratori lungo il ciclo di vita: qualità, efficacia, sicurezza e immissione in commercio.</p>
+        <ul>
+          <li><a href="https://ddrug.unimi.it/research/projects/">Digital therapeutics: UE e India a confronto</a></li>
+        </ul>
+      </li>
+      <li>
+        <span class="n">3</span>
+        <span class="label verb">Valutare</span>
+        <h3>Health Economics</h3>
+        <p>Come le evidenze cliniche, economiche e di real world sostengono le decisioni su valore, prezzo, rimborso e accesso alle tecnologie sanitarie.</p>
+        <ul>
+          <li><a href="https://ddrug.unimi.it/research/health-economics-and-technology-assessment-heta-lab/">HETA Lab</a></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="feat">
+  <div class="w feat-grid">
+    <div class="heta">
+      <span class="label" style="color:var(--accent-ink)">Laboratorio · Health Economics and Technology Assessment</span>
+      <h3>HETA Lab</h3>
+      <blockquote>Il valore di un'innovazione non è soltanto un numero.</blockquote>
+      <p class="x">È il laboratorio del dDRUG per l'economia sanitaria e l'HTA. Una valutazione parte dalla decisione da prendere, non dal modello.</p>
+      <ul class="q">
+        <li><b>Misurare il valore</b>Esiti clinici, costi, qualità della vita e impatto organizzativo.</li>
+        <li><b>Valutazioni che cambiano</b>Ciclo di vita delle tecnologie, real-world evidence e rivalutazioni.</li>
+        <li><b>Evidenze per decidere</b>Comparatori, incertezza e processi decisionali su prezzo e rimborso.</li>
+        <li><b>Sostenibilità ed equità</b>Chi beneficia di un'innovazione, a quale costo e con quali conseguenze per il sistema.</li>
+      </ul>
+      <a class="more" href="https://ddrug.unimi.it/research/health-economics-and-technology-assessment-heta-lab/">La pagina di HETA Lab →</a>
+    </div>
+    <div class="side">
+      <div class="proj">
+        <span class="label">Progetto in corso · HETA Lab</span>
+        <h4>Valutazione economica dell'obesità e delle patologie metaboliche correlate in Italia</h4>
+        <p>Quanto pesa l'obesità sul piano clinico ed economico e che effetto avranno le nuove tecnologie sul Servizio sanitario nazionale. Cost-of-illness, HTA e horizon scanning.</p>
+        <a href="https://ddrug.unimi.it/valutazione-economica-dellobesita-e-delle-patologie-metaboliche-correlate-in-italia/">Scheda del progetto →</a>
+      </div>
+      <div class="proj">
+        <span class="label">Policy paper · novembre 2023</span>
+        <h4>Digital Health &amp; Digital Therapeutics in Policy Pathways of the EU and India</h4>
+        <p>Con Bridge Policy Think Tank, nell'ambito della EU India Think Tank Twinning Initiative finanziata dall'Unione europea.</p>
+        <a href="https://euindiathinktanks.in/2024/publications/digital-health-digital-therapeutics-in-policy-pathways-of-the-eu-and-india/">Leggi il documento →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="persone">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Persone</span><h2>Chi lavora nel gruppo</h2></div>
+      <p>Nomi e ruoli come sul sito attuale. Nel sito definitivo ogni persona avrà foto, temi di ricerca e contatti.</p>
+    </div>
+    <div class="people">
+      <div class="wide">
+        <h3>Docenti e ricercatori</h3>
+        <ul class="cols">
+          <li>Paola Minghetti<span>Professoressa ordinaria</span></li>
+          <li>Francesco Cilurzo<span>Professore ordinario</span></li>
+          <li>Francesca Selmin<span>Professoressa associata</span></li>
+          <li>Chiara Gennari<span>Professoressa associata</span></li>
+          <li>Silvia Franzè<span>Professoressa associata</span></li>
+          <li>Umberto M. Musazzi<span>Professore associato</span></li>
+          <li>Antonella Casiraghi<span>Professoressa associata</span></li>
+          <li>Andrea Marcellusi<span>Professore associato</span></li>
+          <li>Giulia Anderluzzi<span>Ricercatrice tenure-track</span></li>
+          
+        </ul>
+      </div>
+      <div class="">
+        <h3>Post-doc</h3>
+        <ul class="">
+          <li>Chiara Meazzini<span>Post-doc</span></li>
+          <li>Paolo Rocco<span>Post-doc</span></li>
+          <li>Giacomo De Santis<span>Post-doc in Market Access</span></li>
+          
+        </ul>
+      </div>
+      <div class="">
+        <h3>Dottorandi</h3>
+        <ul class="">
+          <li>Marta Medeo<span>Dottoranda</span></li>
+          <li>Viola Bertolotti<span>Dottoranda</span></li>
+          <li>Valentina Pagella<span>Dottoranda</span></li>
+          <li>Sara Azari<span>Dottoranda</span></li>
+          <li>Teodora Dal Buono<span>Dottoranda</span></li>
+          <li>Martina Managò<span>Dottoranda in Market Access</span></li>
+          
+        </ul>
+      </div>
+      <div class="wide">
+        <h3>Alumni</h3>
+        <ul class="cols alumni">
+          <li>Ilaria Franceschini</li>
+          <li>Khalid Garba Mohammed</li>
+          <li>Gaia M.G. Quaroni</li>
+          <li>Giulia Magri</li>
+          <li>Francesco Rama</li>
+          <li>Beatrice Lascu</li>
+          <li>Paola Volontè</li>
+          <li>Giorgia Frigerio</li>
+          <li>Camilla Pozza</li>
+          <li>Sara Manellari</li>
+          <li>Elisa Vettorato</li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="edu" id="formazione">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">Formazione post-laurea</span><h2>Master e corsi</h2></div>
+      <p>Percorsi per laureati e professionisti dell'industria, della farmacia e delle istituzioni.</p>
+    </div>
+    <ul class="courses">
+      <li><span class="label">Master di II livello</span>
+        <div><h3>Scienze regolatorie e accesso al mercato di prodotti ad attività terapeutica e salutare</h3><p>Medicinali, dispositivi medici, cosmetici e integratori. Lezioni online, esercitazioni in presenza, tirocinio in azienda.</p></div>
+        <a href="https://ddrug.unimi.it/post-lauream/master/">Scheda →</a></li>
+      <li><span class="label">Executive Master</span>
+        <div><h3>Clinical Pharmacy</h3></div>
+        <a href="https://ddrug.unimi.it/post-lauream/executive-master-in-clinical-pharmacy/">Scheda →</a></li>
+      <li><span class="label">Corso di perfezionamento</span>
+        <div><h3>Strategie regolatorie e valutazioni economiche per l&#39;accesso ai farmaci</h3><p>Il percorso regolatorio ed economico che porta un medicinale dall&#39;autorizzazione al paziente.</p></div>
+        <a href="https://ddrug.unimi.it/post-lauream/strategie-regolatorie-e-valutazioni-economiche-per-laccesso-ai-farmaci/">Scheda →</a></li>
+      <li><span class="label">Corso di aggiornamento</span>
+        <div><h3>Dispositivi medici, cosmetici e integratori alimentari: aspetti regolatori</h3></div>
+        <a href="https://ddrug.unimi.it/post-lauream/dispositivi-medici-cosmetici-e-integratori-alimentari-aspetti-regolatori/">Scheda →</a></li>
+      <li><span class="label">Aggiornamento professionale</span>
+        <div><h3>Un percorso per il farmacista preparatore</h3><p>Corso teorico-pratico per i farmacisti che allestiscono preparazioni galeniche.</p></div>
+        <a href="https://ddrug.unimi.it/post-lauream/aggiornamento-professionale/">Scheda →</a></li>
+      
+    </ul>
+  </div>
+</section>
+
+<section id="news">
+  <div class="w">
+    <div class="head">
+      <div><span class="label">News ed eventi</span><h2>Dall'archivio</h2></div>
+      <p>Sul sito attuale le notizie si fermano al 2024. Questa sezione andrà alimentata con pubblicazioni, eventi e bandi.</p>
+    </div>
+    <div class="news">
+      <article><span class="label">Convegno · 27-28 novembre 2024</span><h3>Intreccio di sapere tra accademia e industria farmaceutica: Complex Drugs</h3><p>Due giorni su progettazione, sviluppo, produzione e controllo dei farmaci complessi.</p><a href="https://ddrug.unimi.it/workshop-27-28-novembre-2024/">Programma →</a></article>
+      <article><span class="label">Divulgazione · 13 maggio 2024</span><h3>Pint of Science</h3><p>Una serata sui cosmetici e sul Regolamento europeo 1223/2009 che li disciplina.</p><a href="https://ddrug.unimi.it/news/pint-of-science/">Leggi →</a></article>
+      <article><span class="label">Divulgazione · 2024</span><h3>Leggiamo insieme le etichette dei cosmetici</h3><p>Che cosa contengono i cosmetici e come funzionano, a partire da quello che c'è scritto sulla confezione.</p><a href="https://ddrug.unimi.it/news/leggiamo-insieme-le-etichette-dei-cosmetici/">Leggi →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contatti">
+  <div class="w">
+    <h2>Per collaborazioni, tesi e progetti</h2>
+    <dl>
+      <dt>Email</dt><dd>ddrug@unimi.it</dd>
+      <dt>Telefono</dt><dd>+39 02 50324666</dd>
+      <dt>Sede</dt><dd>Dipartimento di Scienze Farmaceutiche, via G. Colombo 71, 20133 Milano</dd>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <span>Università degli Studi di Milano · via Festa del Perdono 7, 20122 Milano</span>
+    <span><a href="https://www.unimi.it">unimi.it</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
