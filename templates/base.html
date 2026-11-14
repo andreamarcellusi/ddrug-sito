@@ -327,6 +327,22 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
 .hh-logo{position:relative;justify-self:end;width:100%;max-width:340px}
 .hh-logo::before{content:"";position:absolute;width:132%;aspect-ratio:1;left:-16%;top:-16%;border-radius:50%;border:2px solid color-mix(in srgb,#fff 16%,transparent)}
 .hh-logo img{position:relative;display:block;width:100%;height:auto}
+/* logo HETA Lab animato: il segno si apre dal punto centrale, poi un ciclo lento di impulso, onde e riflesso */
+.hl{position:relative;display:block;width:100%;height:auto;overflow:visible}
+.hl-onda{fill:none;stroke:#FFA057;stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center}
+.hl-punto{transform-box:fill-box;transform-origin:center}
+@media (prefers-reduced-motion: no-preference){
+  .hl-segno{animation:hl-apri 1.3s cubic-bezier(.2,.7,.2,1) both}
+  .hl-punto{animation:hl-nasci .7s cubic-bezier(.3,1.5,.5,1) both,hl-impulso 7s ease-in-out 1.6s infinite}
+  .hl-onda{animation:hl-onda 7s cubic-bezier(.1,.6,.3,1) 1.7s infinite}
+  .hl-onda2{animation-delay:2.2s}
+  .hl-luce{animation:hl-luce 7s ease-in-out 1.6s infinite}
+}
+@keyframes hl-apri{from{clip-path:circle(0 at 50.6% 47.8%)}to{clip-path:circle(80% at 50.6% 47.8%)}}
+@keyframes hl-nasci{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes hl-impulso{0%,14%,100%{transform:scale(1)}6%{transform:scale(1.16)}}
+@keyframes hl-onda{0%{transform:scale(1);opacity:0}3%{opacity:.75}42%,100%{transform:scale(6.4);opacity:0}}
+@keyframes hl-luce{0%,28%{translate:0 0}62%,100%{translate:620px 0}}
 .hh-nav{border-top:1px solid color-mix(in srgb,#fff 14%,transparent)}
 .hh-nav .w{display:flex;gap:6px 26px;flex-wrap:wrap;padding-block:14px}
 .hh-nav a{font-family:var(--display);font-weight:600;font-size:15px;color:var(--heta-soft);text-decoration:none;padding-block:4px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
