@@ -57,6 +57,7 @@ def main():
                 sys.exit(f"Profilo {f.name}: manca la foto assets/persone/{prof['foto']}")
             prof["foto_w"], prof["foto_h"] = dimensioni(R / "assets" / "persone" / prof["foto"])
         base["pagina"] = f.stem + ".html"
+        base["foto"] = prof.get("foto")
         profili[base["pagina"]] = prof
     gruppi = []
     for nome, largo, alumni in GRUPPI:
@@ -83,6 +84,8 @@ def main():
         sys.exit(f"heta-lab.yml cita persone non visibili in persone.yml: {assenti}")
     for x in heta["persone"]:
         x["pagina"] = visibili[x["nome"]].get("pagina")
+        x["foto"] = visibili[x["nome"]].get("foto")
+        x["iniziali"] = "".join(w[0] for w in x["nome"].split()[:2])
     resa["heta-lab.html"] = env.get_template("heta-lab.html").render(pagina="heta", h=heta, **comuni)
     if OUT.exists():
         shutil.rmtree(OUT)

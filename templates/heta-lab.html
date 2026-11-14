@@ -1,13 +1,21 @@
 {% extends "base.html" %}
 {% block titolo %}HETA Lab · dDRUG UniMi{% endblock %}
 {% block contenuto %}
-<div class="phead hl" id="top">
+<div class="hh" id="top">
   <div class="w">
-    <span class="label">Health Economics and Technology Assessment Laboratory</span>
-    <h1>HETA Lab</h1>
-    <blockquote class="motto">{{ h.motto }}</blockquote>
-    <p>{{ h.missione }}</p>
+    <div>
+      <span class="label">Health Economics and Technology Assessment Laboratory</span>
+      <h1>HETA Lab</h1>
+      <blockquote class="motto">{{ h.motto }}</blockquote>
+      <p>{{ h.missione }}</p>
+    </div>
+    <div class="hh-logo" aria-hidden="true"><img src="assets/logo-heta-lab.jpg" alt="" width="360" height="360"></div>
   </div>
+  <nav class="hh-nav" aria-label="In questa pagina">
+    <div class="w">
+      <a href="#domande">Domande</a><a href="#metodo">Metodo</a><a href="#progetti">Progetti</a><a href="#persone">Persone</a><a href="#output">Produzione scientifica</a><a href="#didattica">Didattica</a><a href="#collaborazioni">Collaborazioni</a>
+    </div>
+  </nav>
 </div>
 
 <main>
@@ -17,14 +25,14 @@
       <h2>Le domande che studiamo</h2>
       <p>{{ h.domande_intro }}</p>
     </div>
-    <ul class="q qd">
-      {% for d in h.domande %}<li><b>{{ d.titolo }}</b>{{ d.testo }}</li>
+    <ul class="qcards hq">
+      {% for d in h.domande %}<li><b>{{ d.titolo }}</b><span>{{ d.testo }}</span></li>
       {% endfor %}
     </ul>
   </div>
 </section>
 
-<section class="feat">
+<section class="feat" id="metodo">
   <div class="w">
     <div class="head">
       <h2>Come lavoriamo</h2>
@@ -47,7 +55,7 @@
     <div class="head">
       <h2>Su cosa stiamo lavorando</h2>
     </div>
-    {% for p in h.progetti %}<article class="course">
+    {% for p in h.progetti %}<article class="prog">
       <div>
         <span class="label">{{ p.stato }}</span>
         <h3>{{ p.titolo }}</h3>
@@ -68,8 +76,11 @@
     <div class="head">
       <h2>Chi lavora nel laboratorio</h2>
     </div>
-    <ul class="q team">
-      {% for p in h.persone %}<li><span class="label">{{ p.ruolo }}</span><b>{% if p.pagina %}<a href="{{ p.pagina }}">{{ p.nome }}</a>{% else %}{{ p.nome }}{% endif %}</b>{{ p.temi }}</li>
+    <ul class="team2">
+      {% for p in h.persone %}<li>
+        {% if p.foto %}<img src="assets/persone/{{ p.foto }}" alt="" width="88" height="88">{% else %}<span class="mono" aria-hidden="true">{{ p.iniziali }}</span>{% endif %}
+        <div><span class="label">{{ p.ruolo }}</span>{% if p.pagina %}<a href="{{ p.pagina }}">{{ p.nome }}</a>{% else %}<b>{{ p.nome }}</b>{% endif %}<p>{{ p.temi }}</p></div>
+      </li>
       {% endfor %}
     </ul>
   </div>
