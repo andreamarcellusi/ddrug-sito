@@ -260,6 +260,24 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
   .nav{gap:2px 18px;font-size:15px}
 }
 
+/* --- motto a scorrimento: la riga arancione sotto l'apertura diventa una fascia --- */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.scorre{position:relative;overflow:hidden;background:var(--accent);color:#1F252E;padding-block:13px 15px}
+.scorre-t{display:flex;width:max-content;align-items:baseline;white-space:nowrap}
+.scorre-t > *{flex:none;padding-right:.55em;font-size:clamp(1.25rem,2.5vw,1.9rem);line-height:1.2}
+.scorre-t > *::after{content:"";display:inline-block;width:.34em;height:.34em;border-radius:50%;background:#1F252E;margin-left:.55em;vertical-align:.14em}
+.scorre-t span{font-family:var(--display);font-weight:800;letter-spacing:-.015em}
+.scorre-t i{font-family:var(--text);font-weight:500}
+@media (prefers-reduced-motion: no-preference){
+  .scorre-t{animation:scorre 110s linear infinite}
+  .scorre:hover .scorre-t{animation-play-state:paused}
+}
+@keyframes scorre{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){
+  .scorre-t{width:auto;flex-wrap:wrap;justify-content:center;white-space:normal;padding-inline:20px;text-align:center}
+  .scorre-t > :nth-child(n+3),.scorre-t > *::after{display:none}
+}
+
 /* --- comportamento: testata fissa, passaggi tra pagine, un solo momento animato --- */
 .skip{position:absolute;left:12px;top:-60px;z-index:40;background:var(--accent);color:#1F252E;font-family:var(--display);font-weight:700;font-size:15px;padding:10px 14px;border-radius:6px;text-decoration:none}
 .skip:focus{top:12px}
@@ -343,6 +361,14 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
     </ol>
   </div>
 </div>
+
+
+<p class="scorre">
+  <span class="sr">L'ultimo miglio dello sviluppo farmaceutico.</span>
+  <span class="scorre-t" aria-hidden="true">
+    <span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i><span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i><span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i><span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i><span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i><span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i><span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i><span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i>
+  </span>
+</p>
 
 <main>
 <section class="feat" id="presentazione">
