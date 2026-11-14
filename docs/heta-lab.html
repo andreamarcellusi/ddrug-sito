@@ -338,6 +338,12 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
   .hl-onda2{animation-delay:2.2s}
   .hl-luce{animation:hl-luce 7s ease-in-out 1.6s infinite}
 }
+/* sigillo dDRUG (variante Health Economics) accanto al logo HETA Lab: stesso sigillo rotante di home e profili */
+.hh-logo .seal{position:absolute;left:-58px;bottom:-46px;width:136px;height:136px;border-radius:50%;background:#fff;padding:5px;box-shadow:0 0 0 5px var(--heta)}
+.hh-logo .seal img{display:block;width:100%;height:100%;border-radius:50%;animation:spin 80s linear infinite}
+.hh-logo .seal::after{content:"";position:absolute;inset:27%;border-radius:50%;background:#fff url("assets/ddrug-mark.png") center/78% no-repeat}
+@media (prefers-reduced-motion: no-preference){.hh-logo .seal{animation:hl-nasci .8s cubic-bezier(.3,1.4,.5,1) .9s both}}
+@media (prefers-reduced-motion: reduce){.hh-logo .seal img{animation:none}}
 @keyframes hl-apri{from{clip-path:circle(0 at 50.6% 47.8%)}to{clip-path:circle(80% at 50.6% 47.8%)}}
 @keyframes hl-nasci{from{transform:scale(0)}to{transform:scale(1)}}
 @keyframes hl-impulso{0%,14%,100%{transform:scale(1)}6%{transform:scale(1.16)}}
@@ -370,6 +376,7 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
   .hh > .w{grid-template-columns:minmax(0,1fr);gap:28px;padding-block:36px 40px}
   .hh-logo{order:-1;justify-self:start;max-width:120px}
   .hh-logo::before{display:none}
+  .hh-logo .seal{left:calc(100% + 16px);bottom:50%;translate:0 50%;width:84px;height:84px;padding:3px;box-shadow:none}
   .hh-nav .w{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;gap:22px}
   .hh-nav a{white-space:nowrap}
   .prog{grid-template-columns:minmax(0,1fr);padding:26px 22px}
@@ -482,7 +489,9 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
     <g clip-path="url(#hl-forma)"><rect class="hl-luce" x="-140" y="-80" width="120" height="520" fill="url(#hl-luce)" transform="rotate(38 180 180)"/></g>
   </g>
   <circle class="hl-punto" cx="182.1" cy="172.1" r="23.9" fill="#EC7205"/>
-</svg></div>
+</svg>
+      <div class="seal" aria-hidden="true"><img src="assets/ddrug-ring-he.jpg" alt=""></div>
+    </div>
   </div>
   <nav class="hh-nav" aria-label="In questa pagina">
     <div class="w">
