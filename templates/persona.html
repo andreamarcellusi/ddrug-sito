@@ -5,39 +5,63 @@
   <div class="w">
     {% if p.foto %}<img src="assets/persone/{{ p.foto }}" alt="Ritratto di {{ p.nome }}" width="{{ p.foto_w }}" height="{{ p.foto_h }}">{% endif %}
     <div>
-      <span class="label">{{ p.ruolo }}{% if p.linea %} · {{ p.linea }}{% endif %}</span>
+      <span class="label">{{ p.ruolo }}{% if p.linea %}, {{ p.linea }}{% endif %}</span>
       <h1>{{ p.nome }}</h1>
-      {% if p.sintesi %}<p>{{ p.sintesi }}</p>{% endif %}
+      {% if p.affiliazione %}<p class="aff">{{ p.affiliazione }}</p>{% endif %}
+      {% if p.sintesi %}<p class="sint">{{ p.sintesi }}</p>{% endif %}
+      <ul class="act">
+        {% if p.email %}<li class="mail"><a href="mailto:{{ p.email }}">{{ p.email }}</a><button type="button" data-copia="{{ p.email }}" aria-live="polite">Copia</button></li>{% endif %}
+        {% for l in p.link %}<li><a href="{{ l.url }}">{{ l.testo }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
 
 <main>
 <section>
-  <div class="w pbody">
-    <div>
-      {% for s in p.sezioni %}<div class="blk">
+  <div class="w pgrid">
+    <nav class="indice" aria-label="In questa pagina">
+      <ul>
+        {% for s in p.sezioni %}<li><a href="#{{ s.id }}">{{ s.breve or s.titolo }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="pmain">
+      {% for s in p.sezioni %}<div class="ps" id="{{ s.id }}">
         <h2>{{ s.titolo }}</h2>
+        {% if s.elenco %}<ul class="dom">{% for v in s.elenco %}<li>{{ v }}</li>{% endfor %}</ul>{% endif %}
+        {% if s.voci %}<ul class="voci">
+          {% for v in s.voci %}<li>{% if v.link %}<a href="{{ v.link }}">{{ v.titolo }}</a>{% else %}<b>{{ v.titolo }}</b>{% endif %}{% if v.dati %}<span>{{ v.dati }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>{% endif %}
         {% if s.testo %}<p>{{ s.testo }}</p>{% endif %}
-        {% if s.elenco %}<ul class="dq">{% for v in s.elenco %}<li>{{ v }}</li>{% endfor %}</ul>{% endif %}
       </div>
       {% endfor %}
     </div>
-    <aside>
-      {% if p.email %}<div class="blk">
-        <h2>Contatti</h2>
-        <p><a href="mailto:{{ p.email }}">{{ p.email }}</a></p>
-      </div>{% endif %}
-      {% if p.incarichi %}<div class="blk">
-        <h2>Nel gruppo</h2>
-        <ul class="dq">{% for i in p.incarichi %}<li>{% if i.link %}<a href="{{ i.link }}">{{ i.testo }}</a>{% else %}{{ i.testo }}{% endif %}</li>{% endfor %}</ul>
-      </div>{% endif %}
-      {% if p.link %}<div class="blk">
-        <h2>Link</h2>
-        <ul class="dq">{% for l in p.link %}<li><a href="{{ l.url }}">{{ l.testo }}</a></li>{% endfor %}</ul>
-      </div>{% endif %}
-    </aside>
   </div>
 </section>
 </main>
+
+<script type="application/ld+json">
+{{ {"@context": "https://schema.org", "@type": "Person", "name": p.nome, "jobTitle": p.ruolo,
+    "affiliation": {"@type": "Organization", "name": p.affiliazione or "Università degli Studi di Milano"},
+    "email": p.email, "sameAs": p.link|map(attribute="url")|list}|tojson }}
+</script>
+<script>
+document.querySelectorAll("[data-copia]").forEach(b => b.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copia); b.textContent = "Copiato"; }
+  catch { b.textContent = "Non riuscito"; }
+  setTimeout(() => { b.textContent = "Copia"; }, 2000);
+}));
+if ("IntersectionObserver" in window) {
+  const voci = new Map([...document.querySelectorAll(".indice a")].map(a => [document.getElementById(a.hash.slice(1)), a]));
+  const oss = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    voci.forEach(a => a.removeAttribute("aria-current"));
+    voci.get(e.target).setAttribute("aria-current", "true");
+  }), { rootMargin: "-25% 0px -65% 0px" });
+  voci.forEach((a, s) => oss.observe(s));
+}
+</script>
 {% endblock %}

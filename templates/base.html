@@ -216,7 +216,7 @@ footer a{color:var(--on-band)}
 .cit{margin:48px 0 0;padding:0;font-style:italic;font-size:1.4rem;line-height:1.3;color:var(--navy);max-width:34ch}
 .edu h3.sub{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.005em;color:var(--on-band-soft);margin:40px 0 12px}
 .edu .head + h3.sub{margin-top:0}
-.pp .w{display:grid;grid-template-columns:250px minmax(0,1fr);gap:44px;align-items:center}
+.pp .w{display:grid;grid-template-columns:290px minmax(0,1fr);gap:56px;align-items:center;padding-block:48px 56px}
 .pp img{display:block;width:100%;height:auto;border-radius:10px}
 .pbody{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px 64px;align-items:start}
 .blk{margin-top:44px}
@@ -227,7 +227,7 @@ footer a{color:var(--on-band)}
 .dq li{padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-weight:600;font-size:1.02rem;line-height:1.3}
 aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overflow-wrap:anywhere}
 .people li a{color:inherit;text-decoration-color:var(--accent);text-decoration-thickness:2px}
-@media (max-width: 900px){.course,.pbody{grid-template-columns:minmax(0,1fr)}.pbody{gap:44px}.pp .w{grid-template-columns:minmax(0,1fr);gap:28px}.q.team,.q.res{grid-template-columns:minmax(0,1fr)}.path.steps h3{margin-top:0;padding-top:10px}.pp img{max-width:220px}}
+@media (max-width: 900px){.course,.pbody{grid-template-columns:minmax(0,1fr)}.pbody{gap:44px}.pp .w{grid-template-columns:minmax(0,1fr);gap:28px}.q.team,.q.res{grid-template-columns:minmax(0,1fr)}.path.steps h3{margin-top:0;padding-top:10px}.pp img{max-width:230px}}
 
 @media (max-width: 900px){
   .hero .w,.head,.feat-grid,.contact .w{grid-template-columns:minmax(0,1fr)}
@@ -258,6 +258,40 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
   .q{grid-template-columns:minmax(0,1fr)}
   .people .cols,.people details ul{columns:1}
   .nav{gap:2px 18px;font-size:15px}
+}
+
+/* --- pagina personale --- */
+.pp h1{font-size:clamp(2.4rem,5.2vw,4rem);margin-top:10px}
+.pp p.aff{margin-top:14px;font-family:var(--display);font-weight:500;font-size:1.02rem;color:var(--on-band-soft)}
+.pp p.sint{margin-top:18px;font-size:1.22rem;line-height:1.45;color:var(--on-band);max-width:46ch}
+.act{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.act li{display:flex}
+.act a,.act button{font-family:var(--display);font-weight:600;font-size:15px;line-height:1.2;color:var(--on-band);background:transparent;border:1.5px solid var(--band-line);padding:9px 16px;border-radius:999px;text-decoration:none;cursor:pointer;transition:border-color .15s,background-color .15s}
+.act a:hover,.act button:hover{border-color:var(--accent-band);background:color-mix(in srgb,var(--on-band) 7%,transparent)}
+.act .mail a{border-radius:999px 0 0 999px;border-right:0;overflow-wrap:anywhere}
+.act .mail button{border-radius:0 999px 999px 0;color:var(--accent-band);min-width:5.6em}
+.pgrid{display:grid;grid-template-columns:190px minmax(0,1fr);gap:72px;align-items:start}
+.indice{position:sticky;top:104px}
+.indice ul{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.indice a{display:block;margin-left:-2px;padding:7px 0 7px 16px;border-left:2px solid transparent;font-family:var(--display);font-weight:600;font-size:15.5px;line-height:1.25;color:var(--ink-soft);text-decoration:none;transition:color .15s,border-color .15s}
+.indice a:hover{color:var(--ink)}
+.indice a[aria-current]{color:var(--ink);border-left-color:var(--accent)}
+.pmain{max-width:720px}
+.ps{scroll-margin-top:104px}
+.ps + .ps{margin-top:64px}
+.ps h2{font-weight:800;font-size:clamp(1.5rem,2.6vw,1.95rem);line-height:1.1;letter-spacing:-.018em}
+.ps > p{margin-top:18px;max-width:64ch}
+.dom{list-style:none;margin:18px 0 0;padding:0;border-top:2px solid var(--ink)}
+.dom li{padding:18px 0;border-bottom:1px solid var(--line);font-size:clamp(1.25rem,2.1vw,1.5rem);line-height:1.32;color:var(--navy);text-wrap:pretty}
+.voci{list-style:none;margin:18px 0 0;padding:0;border-top:2px solid var(--ink)}
+.voci li{padding:14px 0;border-bottom:1px solid var(--line)}
+.voci a,.voci b{display:block;font-family:var(--display);font-weight:700;font-size:1.08rem;line-height:1.3;color:var(--ink);text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.voci span{display:block;margin-top:3px;font-size:1rem;color:var(--ink-soft)}
+@media (max-width: 900px){
+  .pgrid{grid-template-columns:minmax(0,1fr);gap:0}
+  .indice{display:none}
+  .ps{scroll-margin-top:20px}
+  .pp .w{padding-block:32px 44px}
 }
 
 /* --- motto a scorrimento: la riga arancione sotto l'apertura diventa una fascia --- */

@@ -4,20 +4,18 @@ nome: Andrea Marcellusi
 foto: marcellusi-andrea.jpg
 sintesi: Economia sanitaria, Health Technology Assessment, farmacoeconomia, accesso ai farmaci, modelli di simulazione e real-world evidence.
 email: andrea.marcellusi@unimi.it
-incarichi:
-- testo: Coordinatore scientifico di HETA Lab
-  link: heta-lab.html
-- testo: "Coordinatore del corso di perfezionamento Strategie regolatorie e valutazioni economiche per l'accesso ai farmaci"
-  link: formazione.html#strategie-regolatorie-e-valutazioni-economiche-per-l-accesso
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
 link:
 - testo: Profilo UniMi
   url: https://www.unimi.it/it/ugov/person/andrea-marcellusi
-- testo: Pubblicazioni (AIR UniMi)
+- testo: Pubblicazioni su AIR
   url: https://air.unimi.it/cris/rp/rp247933?type=all
-- testo: "Idee poco intelligenti e molto artificiali (ideeartificiali.it)"
+- testo: ideeartificiali.it
   url: https://ideeartificiali.it/
+# Ogni sezione può avere: testo, elenco (domande), voci (righe con titolo, dati, link), breve (nome nell'indice).
 sezioni:
 - titolo: Domande di ricerca
+  breve: Ricerca
   elenco:
   - Come si misura il valore di un'innovazione sanitaria.
   - Come cambia una valutazione quando arrivano nuovi dati.
@@ -26,6 +24,26 @@ sezioni:
 - titolo: Metodo
   testo: Ogni analisi parte dalla definizione della domanda decisionale, rende esplicite le assunzioni e traduce i risultati in implicazioni per pazienti, clinici, decisori e Servizio sanitario nazionale.
 - titolo: Intelligenza artificiale nella ricerca
+  breve: IA nella ricerca
   testo: "Gli strumenti di intelligenza artificiale sono usati a supporto di attività strutturate: estrazione dei dati, revisione indipendente delle evidenze, controllo delle procedure e analisi di riproducibilità. La supervisione resta umana."
 - titolo: Didattica
-  testo: "Insegnamenti nei corsi di laurea: Mercato e gestione dei prodotti in farmacia; Produzione, legislazione e commercializzazione di medicinali biotecnologici; Mercato farmaceutico e normativa dei prodotti salutari. Contribuisce a dottorato, master e formazione continua, compresa la formazione metodologica per AIFA sui confronti indiretti, e tiene corsi per aziende e società di consulenza su HTA, market access e real-world data."
+  voci:
+  - titolo: Mercato e gestione dei prodotti in farmacia
+    dati: A.A. 2026/2027, 8 CFU, 64 ore
+    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/mercato-e-gestione-dei-prodotti-farmacia
+  - titolo: Produzione, legislazione e commercializzazione di medicinali biotecnologici
+    dati: A.A. 2026/2027, 7 CFU, 56 ore
+    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/produzione-legislazione-e-commercializzazione-di-medicinali-biotecnologici-0
+  - titolo: Mercato farmaceutico e normativa dei prodotti salutari
+    dati: A.A. 2025/2026, modulo da 4 CFU, 32 ore
+    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2026/mercato-farmaceutico-e-normativa-dei-prodotti-salutari
+  testo: Contribuisce a dottorato, master e formazione continua, compresa la formazione metodologica per AIFA sui confronti indiretti, e tiene corsi per aziende e società di consulenza su HTA, market access e real-world data.
+- titolo: Nel gruppo dDRUG
+  breve: Nel gruppo
+  voci:
+  - titolo: Coordinatore scientifico di HETA Lab
+    dati: Laboratorio di economia sanitaria e HTA
+    link: heta-lab.html
+  - titolo: "Coordinatore del corso di perfezionamento Strategie regolatorie e valutazioni economiche per l'accesso ai farmaci"
+    dati: Formazione post-laurea
+    link: formazione.html#strategie-regolatorie-e-valutazioni-economiche-per-l-accesso
