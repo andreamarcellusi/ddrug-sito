@@ -1,10 +1,18 @@
-# Pagina personale. Testi ricavati dalla pagina del vecchio sito (ddrug.unimi.it/andrea-marcellusi/),
-# da rivedere e approvare dall'interessato. Il ruolo viene da persone.yml.
+# Pagina personale. I testi di domande, metodo, IA e didattica vengono dalla pagina del vecchio sito
+# (ddrug.unimi.it/andrea-marcellusi/), riscritti. Incarichi esterni indicati dall'interessato.
+# Il ruolo viene da persone.yml.
 nome: Andrea Marcellusi
 foto: marcellusi-andrea.jpg
-sintesi: Economia sanitaria, Health Technology Assessment, farmacoeconomia, accesso ai farmaci, modelli di simulazione e real-world evidence.
-email: andrea.marcellusi@unimi.it
+sigillo: ddrug-ring-he.jpg
 affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+email: andrea.marcellusi@unimi.it
+ambiti:
+- Economia sanitaria
+- Health Technology Assessment
+- Farmacoeconomia
+- Accesso ai farmaci
+- Modelli di simulazione
+- Real-world evidence
 link:
 - testo: Profilo UniMi
   url: https://www.unimi.it/it/ugov/person/andrea-marcellusi
@@ -12,38 +20,50 @@ link:
   url: https://air.unimi.it/cris/rp/rp247933?type=all
 - testo: ideeartificiali.it
   url: https://ideeartificiali.it/
-# Ogni sezione può avere: testo, elenco (domande), voci (righe con titolo, dati, link), breve (nome nell'indice).
-sezioni:
-- titolo: Domande di ricerca
-  breve: Ricerca
-  elenco:
-  - Come si misura il valore di un'innovazione sanitaria.
-  - Come cambia una valutazione quando arrivano nuovi dati.
-  - Quali evidenze devono guidare le decisioni su prezzo, rimborso e accesso.
-  - Come si distingue una spesa più alta da un accesso più ampio e da una perdita di valore.
+domande:
+- Come si misura il valore di un'innovazione sanitaria.
+- Come cambia una valutazione quando arrivano nuovi dati.
+- Quali evidenze devono guidare le decisioni su prezzo, rimborso e accesso.
+- Come si distingue una spesa più alta da un accesso più ampio e da una perdita di valore.
+approccio:
 - titolo: Metodo
   testo: Ogni analisi parte dalla definizione della domanda decisionale, rende esplicite le assunzioni e traduce i risultati in implicazioni per pazienti, clinici, decisori e Servizio sanitario nazionale.
 - titolo: Intelligenza artificiale nella ricerca
-  breve: IA nella ricerca
   testo: "Gli strumenti di intelligenza artificiale sono usati a supporto di attività strutturate: estrazione dei dati, revisione indipendente delle evidenze, controllo delle procedure e analisi di riproducibilità. La supervisione resta umana."
-- titolo: Didattica
-  voci:
-  - titolo: Mercato e gestione dei prodotti in farmacia
-    dati: A.A. 2026/2027, 8 CFU, 64 ore
-    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/mercato-e-gestione-dei-prodotti-farmacia
-  - titolo: Produzione, legislazione e commercializzazione di medicinali biotecnologici
-    dati: A.A. 2026/2027, 7 CFU, 56 ore
-    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/produzione-legislazione-e-commercializzazione-di-medicinali-biotecnologici-0
-  - titolo: Mercato farmaceutico e normativa dei prodotti salutari
-    dati: A.A. 2025/2026, modulo da 4 CFU, 32 ore
-    link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2026/mercato-farmaceutico-e-normativa-dei-prodotti-salutari
-  testo: Contribuisce a dottorato, master e formazione continua, compresa la formazione metodologica per AIFA sui confronti indiretti, e tiene corsi per aziende e società di consulenza su HTA, market access e real-world data.
-- titolo: Nel gruppo dDRUG
-  breve: Nel gruppo
-  voci:
-  - titolo: Coordinatore scientifico di HETA Lab
-    dati: Laboratorio di economia sanitaria e HTA
-    link: heta-lab.html
-  - titolo: "Coordinatore del corso di perfezionamento Strategie regolatorie e valutazioni economiche per l'accesso ai farmaci"
-    dati: Formazione post-laurea
-    link: formazione.html#strategie-regolatorie-e-valutazioni-economiche-per-l-accesso
+# Schede con logo. tono: chiaro (fondo bianco) oppure heta (fondo blu del logo HETA Lab).
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Health Economics
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring-he.jpg
+  tono: chiaro
+  link: index.html
+- ente: HETA Lab
+  ruolo: Coordinatore scientifico
+  nota: Health Economics and Technology Assessment Laboratory
+  logo: logo-heta-lab.jpg
+  tono: heta
+  link: heta-lab.html
+incarichi:
+- ente: ISPOR Italy Rome Chapter
+  ruolo: Presidente
+- ente: EUPATI Italia
+  ruolo: Vicepresidente
+- ente: Clinical Drug Investigation
+  ruolo: Editorial board
+- ente: Global & Regional Health Technology Assessment (GRHTA)
+  ruolo: Editorial board
+- ente: "Corso di perfezionamento Strategie regolatorie e valutazioni economiche per l'accesso ai farmaci"
+  ruolo: Coordinatore
+  link: formazione.html#strategie-regolatorie-e-valutazioni-economiche-per-l-accesso
+insegnamenti:
+- titolo: Mercato e gestione dei prodotti in farmacia
+  dati: A.A. 2026/2027, 8 CFU, 64 ore
+  link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/mercato-e-gestione-dei-prodotti-farmacia
+- titolo: Produzione, legislazione e commercializzazione di medicinali biotecnologici
+  dati: A.A. 2026/2027, 7 CFU, 56 ore
+  link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2027/produzione-legislazione-e-commercializzazione-di-medicinali-biotecnologici-0
+- titolo: Mercato farmaceutico e normativa dei prodotti salutari
+  dati: A.A. 2025/2026, modulo da 4 CFU, 32 ore
+  link: https://www.unimi.it/it/corsi/insegnamenti-dei-corsi-di-laurea/2026/mercato-farmaceutico-e-normativa-dei-prodotti-salutari
+didattica_nota: Contribuisce a dottorato, master e formazione continua, compresa la formazione metodologica per AIFA sui confronti indiretti, e tiene corsi per aziende e società di consulenza su HTA, market access e real-world data.

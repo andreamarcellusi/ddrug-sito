@@ -56,8 +56,6 @@ def main():
             if not (R / "assets" / "persone" / prof["foto"]).exists():
                 sys.exit(f"Profilo {f.name}: manca la foto assets/persone/{prof['foto']}")
             prof["foto_w"], prof["foto_h"] = dimensioni(R / "assets" / "persone" / prof["foto"])
-        for s in prof.get("sezioni", []):
-            s["id"] = slug(s.get("breve", s["titolo"]))
         base["pagina"] = f.stem + ".html"
         profili[base["pagina"]] = prof
     gruppi = []
