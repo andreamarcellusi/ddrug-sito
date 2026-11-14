@@ -1,0 +1,9 @@
+{# Fascia con un motto a scorrimento: "a" in Archivo, "b" in corsivo, alternati. #}
+{% macro scorre(a, b, classe="") %}
+<p class="scorre {{ classe }}">
+  <span class="sr">{{ a }} {{ b }}</span>
+  <span class="scorre-t" aria-hidden="true">
+    {% for i in range(8) %}<span>{{ a }}</span><i>{{ b }}</i>{% endfor %}
+  </span>
+</p>
+{% endmacro %}

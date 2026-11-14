@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_scorre.html" import scorre %}
 {% block contenuto %}
 
 <div class="hero" id="top">
@@ -22,12 +23,7 @@
 </div>
 
 {# Motto: dalla presentazione del gruppo, "the last mile of pharmaceutical development" #}
-<p class="scorre">
-  <span class="sr">L'ultimo miglio dello sviluppo farmaceutico.</span>
-  <span class="scorre-t" aria-hidden="true">
-    {% for i in range(8) %}<span>L'ultimo miglio dello sviluppo farmaceutico</span><i>The last mile of pharmaceutical development</i>{% endfor %}
-  </span>
-</p>
+{{ scorre("L'ultimo miglio dello sviluppo farmaceutico", "The last mile of pharmaceutical development") }}
 
 <main>
 <section class="feat" id="presentazione">

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_scorre.html" import scorre %}
 {% block titolo %}HETA Lab · dDRUG UniMi{% endblock %}
 {% block contenuto %}
 <div class="hh" id="top">
@@ -6,7 +7,6 @@
     <div>
       <span class="label">Health Economics and Technology Assessment Laboratory</span>
       <h1>HETA Lab</h1>
-      <blockquote class="motto">{{ h.motto }}</blockquote>
       <p>{{ h.missione }}</p>
     </div>
     <div class="hh-logo" aria-hidden="true"><img src="assets/logo-heta-lab.jpg" alt="" width="360" height="360"></div>
@@ -17,6 +17,7 @@
     </div>
   </nav>
 </div>
+{{ scorre(h.motto_a, h.motto_b, "heta") }}
 
 <main>
 <section id="domande">

@@ -3,6 +3,9 @@
 # I testi sono una riscrittura da approvare; le due citazioni sono riportate come sul vecchio sito.
 # Esclusi per le regole del sito: Nina Di Gregorio (ruolo da indicare) e The Modelling Week (da decidere).
 motto: Il valore di un'innovazione non è soltanto un numero. È una decisione da rendere trasparente.
+# Lo stesso motto diviso in due per la fascia a scorrimento
+motto_a: Il valore di un'innovazione non è soltanto un numero.
+motto_b: È una decisione da rendere trasparente.
 missione: HETA Lab è il laboratorio di dDRUG per l'economia sanitaria e l'Health Technology Assessment. Studia come le evidenze cliniche, economiche e di real world possono sostenere decisioni più consapevoli su valore, prezzo, rimborso e accesso alle tecnologie sanitarie.
 domande_intro: Le discipline definiscono il campo. Le domande spiegano perché studiarlo.
 domande:

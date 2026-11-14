@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_scorre.html" import scorre %}
 {% block titolo %}{{ p.nome }} · dDRUG UniMi{% endblock %}
 {% block contenuto %}
 <div class="pf" id="top">
@@ -20,6 +21,7 @@
     </figure>{% endif %}
   </div>
 </div>
+{% if p.motto_a %}{{ scorre(p.motto_a, p.motto_b) }}{% endif %}
 
 <main>
 {% if p.domande %}<section id="ricerca">

@@ -319,11 +319,11 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
 
 /* --- pagina HETA Lab: tema del sito, con il blu e l'arancione del logo del laboratorio in apertura --- */
 .hh{--heta:#00336C;--heta-or:#EC7205;--heta-soft:#C9D6EA;background:var(--heta);color:#fff;border-bottom:6px solid var(--heta-or);overflow:hidden}
-.hh > .w{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:64px;align-items:center;padding-block:60px 56px}
+.hh > .w{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:64px;align-items:center;padding-block:64px 60px}
 .hh .label{color:#FFA057;font-size:15.5px}
 .hh h1{font-weight:800;font-size:clamp(3rem,8vw,6rem);line-height:.92;letter-spacing:-.035em;margin-top:10px}
 .hh .motto{margin-top:26px;color:#fff;max-width:26ch;font-size:clamp(1.5rem,2.9vw,2.15rem);line-height:1.22}
-.hh p{margin-top:22px;font-size:1.1rem;line-height:1.55;color:var(--heta-soft);max-width:58ch}
+.hh p{margin-top:26px;font-size:1.25rem;line-height:1.5;color:#E6EDF7;max-width:52ch}
 .hh-logo{position:relative;justify-self:end;width:100%;max-width:340px}
 .hh-logo::before{content:"";position:absolute;width:132%;aspect-ratio:1;left:-16%;top:-16%;border-radius:50%;border:2px solid color-mix(in srgb,#fff 16%,transparent)}
 .hh-logo img{position:relative;display:block;width:100%;height:auto}
@@ -365,6 +365,7 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
 /* --- motto a scorrimento: la riga arancione sotto l'apertura diventa una fascia --- */
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .scorre{position:relative;overflow:hidden;background:var(--accent);color:#1F252E;padding-block:13px 15px}
+.scorre.heta{background:#EC7205}
 .scorre-t{display:flex;width:max-content;align-items:baseline;white-space:nowrap}
 .scorre-t > *{flex:none;padding-right:.55em;font-size:clamp(1.25rem,2.5vw,1.9rem);line-height:1.2}
 .scorre-t > *::after{content:"";display:inline-block;width:.34em;height:.34em;border-radius:50%;background:#1F252E;margin-left:.55em;vertical-align:.14em}
@@ -448,7 +449,6 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
     <div>
       <span class="label">Health Economics and Technology Assessment Laboratory</span>
       <h1>HETA Lab</h1>
-      <blockquote class="motto">Il valore di un&#39;innovazione non è soltanto un numero. È una decisione da rendere trasparente.</blockquote>
       <p>HETA Lab è il laboratorio di dDRUG per l&#39;economia sanitaria e l&#39;Health Technology Assessment. Studia come le evidenze cliniche, economiche e di real world possono sostenere decisioni più consapevoli su valore, prezzo, rimborso e accesso alle tecnologie sanitarie.</p>
     </div>
     <div class="hh-logo" aria-hidden="true"><img src="assets/logo-heta-lab.jpg" alt="" width="360" height="360"></div>
@@ -459,6 +459,14 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
     </div>
   </nav>
 </div>
+
+<p class="scorre heta">
+  <span class="sr">Il valore di un&#39;innovazione non è soltanto un numero. È una decisione da rendere trasparente.</span>
+  <span class="scorre-t" aria-hidden="true">
+    <span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i><span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i><span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i><span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i><span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i><span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i><span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i><span>Il valore di un&#39;innovazione non è soltanto un numero.</span><i>È una decisione da rendere trasparente.</i>
+  </span>
+</p>
+
 
 <main>
 <section id="domande">
