@@ -19,7 +19,7 @@
           <span class="label">{{ c.tipo }}{% if c.anno %} · {{ c.anno }}{% endif %}</span>
           <h3>{{ c.titolo }}</h3>
           {% if c.descrizione %}<p>{{ c.descrizione }}</p>{% endif %}
-          {% if c.link %}<a class="more" href="{{ c.link }}">Scheda e iscrizione →</a>{% endif %}
+          {% if c.link %}<a class="more" href="{{ c.link }}">Scheda e iscrizione</a>{% endif %}
         </div>
         {% if c.dati %}<dl class="cf">
           {% for k, v in c.dati %}<dt>{{ k }}</dt><dd>{{ v }}</dd>
