@@ -356,6 +356,10 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
 .hh-logo .seal::after{content:"";position:absolute;inset:27%;border-radius:50%;background:#fff url("assets/ddrug-mark.png") center/78% no-repeat}
 @media (prefers-reduced-motion: no-preference){.hh-logo .seal{animation:hl-nasci .8s cubic-bezier(.3,1.4,.5,1) .9s both}}
 @media (prefers-reduced-motion: reduce){.hh-logo .seal img{animation:none}}
+/* video di presentazione HETA Lab */
+.hv{padding-bottom:64px}
+.hv-play{margin:28px 0 0;border-radius:14px;overflow:hidden;background:#00336C;box-shadow:0 18px 50px -18px rgba(0,30,70,.45),0 0 0 1px rgba(0,51,108,.12)}
+.hv-play video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#00336C}
 @keyframes hl-apri{from{clip-path:circle(0 at 50.6% 47.8%)}to{clip-path:circle(80% at 50.6% 47.8%)}}
 @keyframes hl-nasci{from{transform:scale(0)}to{transform:scale(1)}}
 @keyframes hl-impulso{0%,14%,100%{transform:scale(1)}6%{transform:scale(1.16)}}
@@ -507,7 +511,7 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
   </div>
   <nav class="hh-nav" aria-label="In questa pagina">
     <div class="w">
-      <a href="#domande">Domande</a><a href="#metodo">Metodo</a><a href="#progetti">Progetti</a><a href="#persone">Persone</a><a href="#output">Produzione scientifica</a><a href="#didattica">Didattica</a><a href="#collaborazioni">Collaborazioni</a>
+      <a href="#video">Video</a><a href="#domande">Domande</a><a href="#metodo">Metodo</a><a href="#progetti">Progetti</a><a href="#persone">Persone</a><a href="#output">Produzione scientifica</a><a href="#didattica">Didattica</a><a href="#collaborazioni">Collaborazioni</a>
     </div>
   </nav>
 </div>
@@ -521,6 +525,20 @@ aside .blk p{font-family:var(--display);font-weight:600;font-size:1.02rem;overfl
 
 
 <main>
+<section class="hv" id="video">
+  <div class="w">
+    <div class="head">
+      <h2>HETA Lab in 33 secondi</h2>
+      <p>Le domande, i modelli e il metodo del laboratorio. Le figure sono schemi illustrativi: piano di costo-efficacia e curva di accettabilità sono calcolati su dati simulati.</p>
+    </div>
+    <figure class="hv-play">
+      <video controls playsinline preload="none" poster="https://d2ol7oe51mr4n9.cloudfront.net/user_3AkDdE4X07Pcji9iqDuQyDZPdFW/4ad2924f-8a7a-4a01-8584-d7e0a15b44a8.jpg" width="1920" height="1080">
+        <source src="https://d2ol7oe51mr4n9.cloudfront.net/user_3AkDdE4X07Pcji9iqDuQyDZPdFW/0660a10c-d9a4-4daa-9048-ae4cfc4c8ebd.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </div>
+</section>
+
 <section id="domande">
   <div class="w">
     <div class="head">
