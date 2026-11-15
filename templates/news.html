@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block titolo %}{{ n.titolo }} · dDRUG UniMi{% endblock %}
+{% block contenuto %}
+<div class="phead" id="top">
+  <div class="w">
+    <span class="label">{{ n.etichetta }}{% if n.linea %} · {{ n.linea }}{% endif %}</span>
+    <h1 class="nt">{{ n.titolo }}</h1>
+    <p>{{ n.sintesi }}</p>
+  </div>
+</div>
+
+<main>
+<section>
+  <div class="w art">
+    <div class="corpo">
+      {% for par in n.testo %}<p>{{ par }}</p>
+      {% endfor %}
+      {% if n.autori %}<dl class="cf crediti">
+        <dt>Gruppo di lavoro</dt><dd>{% for a in n.autori %}{% if pagine_persone.get(a) %}<a href="{{ pagine_persone[a] }}">{{ a }}</a>{% else %}{{ a }}{% endif %}{{ ", " if not loop.last }}{% endfor %}</dd>
+        {% if n.fonte %}<dt>Fonte</dt><dd>{{ n.fonte }}</dd>{% endif %}
+      </dl>{% endif %}
+      <a class="more" href="index.html#news">Tutte le news</a>
+    </div>
+    {% if n.video %}<figure class="clip">
+      <video controls preload="none" playsinline poster="assets/{{ n.poster }}" width="{{ n.video_w }}" height="{{ n.video_h }}" aria-label="{{ n.video_alt }}">
+        <source src="assets/{{ n.video }}" type="video/mp4">
+        <a href="assets/{{ n.video }}">Scarica il video</a>
+      </video>
+      {% if n.video_didascalia %}<figcaption>{{ n.video_didascalia }}</figcaption>{% endif %}
+    </figure>{% endif %}
+  </div>
+</section>
+</main>
+{% endblock %}

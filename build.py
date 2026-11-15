@@ -1,6 +1,8 @@
 """Genera il sito DDRUG in docs/ a partire da content/ e templates/.
 Uso: python3 build.py   (richiede jinja2 e pyyaml)"""
-import re, shutil, sys, pathlib, unicodedata, yaml
+import os, re, shutil, sys, pathlib, unicodedata, yaml
+from datetime import datetime
+from zoneinfo import ZoneInfo
 from jinja2 import Environment, FileSystemLoader
 
 R = pathlib.Path(__file__).parent
@@ -42,6 +44,31 @@ def carica(nome):
 def visibile(x):
     return str(x.get("mostra", "sì")).strip().lower() in ("sì", "si", "yes")
 
+def prepara_news():
+    """News già pubblicabili (pubblica_dal passato) e file di quelle ancora in attesa.
+    Con DDRUG_ANTEPRIMA=1 mostra anche quelle programmate, per controllarle prima dell'uscita."""
+    adesso = datetime.now(ZoneInfo("Europe/Rome"))
+    anteprima = os.environ.get("DDRUG_ANTEPRIMA") == "1"
+    uscite, in_attesa = [], []
+    for n in carica("news.yml")["news"]:
+        quando = n.get("pubblica_dal")
+        if quando:
+            quando = datetime.strptime(str(quando), "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("Europe/Rome"))
+        for k in ("video", "poster"):
+            if n.get(k) and not (R / "assets" / n[k]).exists():
+                sys.exit(f"News {n['titolo']}: manca il file assets/{n[k]}")
+        if quando and quando > adesso and not anteprima:
+            in_attesa += [n[k] for k in ("video", "poster") if n.get(k)]
+            continue
+        if n.get("slug"):
+            n["href"] = f"news-{n['slug']}.html"
+        elif n.get("link"):
+            n["href"] = n["link"]
+        else:
+            sys.exit(f"News {n['titolo']}: serve slug o link")
+        uscite.append(n)
+    return uscite, in_attesa
+
 def main():
     persone = [p for p in carica("persone.yml")["persone"] if visibile(p) and p.get("gruppo")]
     corsi = [c for c in carica("formazione.yml")["corsi"] if visibile(c) and "verificare" not in c.get("tipo", "").lower()]
@@ -68,14 +95,19 @@ def main():
     if sconosciuti:
         sys.exit(f"Gruppo non previsto in persone.yml: {sconosciuti}")
     ricerca = carica("ricerca.yml")
+    news, in_attesa = prepara_news()
     env = Environment(loader=FileSystemLoader(R / "templates"), autoescape=True)
-    comuni = dict(gruppi=gruppi, corsi=corsi, ricerca=ricerca, gruppi_corsi=prepara_corsi(corsi),
+    comuni = dict(news=news, gruppi=gruppi, corsi=corsi, ricerca=ricerca, gruppi_corsi=prepara_corsi(corsi),
                   n_docenti=sum(p["gruppo"] == "Docenti e ricercatori" for p in persone),
                   n_giovani=sum(p["gruppo"] in ("Post-doc", "Dottorandi") for p in persone))
     pagine = {"index.html": ("home.html", "home"), "formazione.html": ("formazione.html", "formazione")}
     resa = {out: env.get_template(tpl).render(pagina=nome, **comuni) for out, (tpl, nome) in pagine.items()}
     for out, prof in profili.items():
         resa[out] = env.get_template("persona.html").render(pagina="persona", p=prof, **comuni)
+    pagine_persone = {p["nome"]: p["pagina"] for p in persone if p.get("pagina")}
+    for n in news:
+        if n.get("slug"):
+            resa[n["href"]] = env.get_template("news.html").render(pagina="news", n=n, pagine_persone=pagine_persone, **comuni)
     heta = carica("heta-lab.yml")
     visibili = {x["nome"]: x for x in persone}
     citati = [x["nome"] for x in heta["persone"]] + [n for pr in heta["progetti"] for n in pr.get("persone", [])]
@@ -93,8 +125,11 @@ def main():
     for out, html in resa.items():
         (OUT / out).write_text(html, encoding="utf-8")
     shutil.copytree(R / "assets", OUT / "assets")
+    for f in in_attesa:
+        (OUT / "assets" / f).unlink()
     (OUT / ".nojekyll").write_text("")
-    print(f"OK: {len(persone)} persone, {len(corsi)} corsi, {len(resa)} pagine")
+    print(f"OK: {len(persone)} persone, {len(corsi)} corsi, {len(news)} news, {len(resa)} pagine"
+          + (f", {len(in_attesa)} file di news programmate esclusi" if in_attesa else ""))
 
 if __name__ == "__main__":
     main()

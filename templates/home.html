@@ -182,9 +182,8 @@
       <h2>News ed eventi</h2>
     </div>
     <div class="news">
-      <article><span class="label">Convegno · 27-28 novembre 2024</span><h3>Intreccio di sapere tra accademia e industria farmaceutica: Complex Drugs</h3><p>Due giorni su progettazione, sviluppo, produzione e controllo dei farmaci complessi.</p><a href="https://ddrug.unimi.it/workshop-27-28-novembre-2024/">Programma</a></article>
-      <article><span class="label">Divulgazione · 13 maggio 2024</span><h3>Pint of Science</h3><p>Una serata sui cosmetici e sul Regolamento europeo 1223/2009 che li disciplina.</p><a href="https://ddrug.unimi.it/news/pint-of-science/">Leggi</a></article>
-      <article><span class="label">Divulgazione · 2024</span><h3>Leggiamo insieme le etichette dei cosmetici</h3><p>Che cosa contengono i cosmetici e come funzionano, a partire da quello che c'è scritto sulla confezione.</p><a href="https://ddrug.unimi.it/news/leggiamo-insieme-le-etichette-dei-cosmetici/">Leggi</a></article>
+      {% for n in news[:3] %}<article><span class="label">{{ n.etichetta }}</span><h3>{{ n.titolo }}</h3><p>{{ n.sintesi }}</p><a href="{{ n.href }}">{{ n.link_testo or "Leggi" }}</a></article>
+      {% endfor %}
     </div>
   </div>
 </section>

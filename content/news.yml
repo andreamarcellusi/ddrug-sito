@@ -1,0 +1,64 @@
+# News ed eventi. In home compaiono le tre più recenti tra quelle già pubblicate.
+# pubblica_dal (facoltativo, ora italiana "AAAA-MM-GG HH:MM"): prima di quel momento la news
+# resta fuori dal sito, compresi la sua pagina e i suoi file in assets/news/.
+# slug (facoltativo): crea una pagina interna news-<slug>.html con testo, video e crediti.
+# link (facoltativo): rimanda a una pagina esterna invece che a una pagina interna.
+
+news:
+- slug: fondo-innovativi-2026-2029
+  pubblica_dal: "2026-11-17 09:00"
+  etichetta: Ricerca · 17 novembre 2026
+  titolo: "Fondo farmaci innovativi: quanta parte della dotazione sarà utilizzata nel 2026-2029?"
+  sintesi: >-
+    Una previsione della spesa per componenti, un'indicazione alla volta. Nel caso base
+    resta inutilizzato circa un euro su tre.
+  linea: Health Economics
+  testo:
+  - >-
+    HETA Lab e PharmaValue hanno stimato quanta parte del Fondo per i farmaci innovativi
+    sarà effettivamente utilizzata tra il 2026 e il 2029.
+  - >-
+    Il punto di partenza sono le circa cento indicazioni entrate nel Fondo fino a oggi. Su
+    questi dati sono stati stimati due elementi: come cresce la spesa di un'indicazione nei
+    36 mesi di permanenza nel Fondo e quanto vale un'indicazione in base alle informazioni
+    disponibili al momento dell'ingresso, come il tipo di terapia o di indicazione.
+  - >-
+    La spesa è stata poi proiettata un'indicazione alla volta, distinguendo quattro
+    componenti: le indicazioni già nel Fondo, quelle rimborsate dal 2026, quelle individuate
+    dall'horizon scanning (selezionate da un panel di esperti tra 40 indicazioni candidate)
+    e una stima delle indicazioni oggi non ancora note.
+  - >-
+    Nel caso base la spesa raggiunge il massimo nel 2028, con circa 840 milioni di euro a
+    fronte di 1.060 milioni stanziati. Sull'intero quadriennio resta inutilizzato circa un
+    euro su tre. Si tratta di una stima, da leggere con le cautele proprie di ogni esercizio
+    previsionale. Gli scenari alternativi saranno presentati nell'articolo in corso di
+    pubblicazione.
+  video: news/fondo-innovativi-2026-2029.mp4
+  poster: news/fondo-innovativi-2026-2029.jpg
+  video_w: 1080
+  video_h: 1350
+  video_didascalia: Spesa mensile prevista nel caso base, per componente, 2026-2029.
+  video_alt: >-
+    Animazione del grafico della spesa mensile prevista per il Fondo farmaci innovativi dal
+    2026 al 2029, divisa in quattro componenti, con la linea della dotazione di 1.060 milioni
+    l'anno. Nel caso base la spesa prevista è di 2.809 milioni e restano inutilizzati 1.431
+    milioni, il 34% dello stanziato. Il video si chiude con uno scenario simulato presentato
+    nell'articolo in uscita.
+  autori: [Andrea Marcellusi, Martina Managò, Giacomo De Santis, Valeria Viola, Federico Tartarelli]
+  fonte: Elaborazioni HETA Lab e PharmaValue su dati AIFA e PharmaValue.
+
+- etichetta: Convegno · 27-28 novembre 2024
+  titolo: "Intreccio di sapere tra accademia e industria farmaceutica: Complex Drugs"
+  sintesi: Due giorni su progettazione, sviluppo, produzione e controllo dei farmaci complessi.
+  link: https://ddrug.unimi.it/workshop-27-28-novembre-2024/
+  link_testo: Programma
+
+- etichetta: Divulgazione · 13 maggio 2024
+  titolo: Pint of Science
+  sintesi: Una serata sui cosmetici e sul Regolamento europeo 1223/2009 che li disciplina.
+  link: https://ddrug.unimi.it/news/pint-of-science/
+
+- etichetta: Divulgazione · 2024
+  titolo: Leggiamo insieme le etichette dei cosmetici
+  sintesi: Che cosa contengono i cosmetici e come funzionano, a partire da quello che c'è scritto sulla confezione.
+  link: https://ddrug.unimi.it/news/leggiamo-insieme-le-etichette-dei-cosmetici/
