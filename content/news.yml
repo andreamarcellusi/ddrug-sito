@@ -14,25 +14,11 @@ news:
     resta inutilizzato circa un euro su tre.
   linea: Health Economics
   testo:
-  - >-
-    HETA Lab e PharmaValue hanno stimato quanta parte del Fondo per i farmaci innovativi
-    sarà effettivamente utilizzata tra il 2026 e il 2029.
-  - >-
-    Il punto di partenza sono le circa cento indicazioni entrate nel Fondo fino a oggi. Su
-    questi dati sono stati stimati due elementi: come cresce la spesa di un'indicazione nei
-    36 mesi di permanenza nel Fondo e quanto vale un'indicazione in base alle informazioni
-    disponibili al momento dell'ingresso, come il tipo di terapia o di indicazione.
-  - >-
-    La spesa è stata poi proiettata un'indicazione alla volta, distinguendo quattro
-    componenti: le indicazioni già nel Fondo, quelle rimborsate dal 2026, quelle individuate
-    dall'horizon scanning (selezionate da un panel di esperti tra 40 indicazioni candidate)
-    e una stima delle indicazioni oggi non ancora note.
-  - >-
-    Nel caso base la spesa raggiunge il massimo nel 2028, con circa 840 milioni di euro a
-    fronte di 1.060 milioni stanziati. Sull'intero quadriennio resta inutilizzato circa un
-    euro su tre. Si tratta di una stima, da leggere con le cautele proprie di ogni esercizio
-    previsionale. Gli scenari alternativi saranno presentati nell'articolo in corso di
-    pubblicazione.
+  - "Questa settimana ho messo da parte (anche se non del tutto, lo ammetto :-)) l'intelligenza artificiale e mi sono rimesso a fare ricerca al vecchio modo. Insieme agli amici di PharmaValue abbiamo provato a rispondere a una domanda che si pongono in tanti: riusciremo a spendere tutto il Fondo dei farmaci innovativi nei prossimi anni? Ed ecco che torna il tema dell'horizon scanning e delle previsioni di spesa."
+  - "🔎 Primo step, sempre lo stesso: guardare indietro prima di guardare avanti. Siamo partiti dalle circa cento indicazioni entrate nel Fondo fino a oggi e abbiamo chiesto ai dati due cose: come cresce la spesa di un'indicazione nei 36 mesi in cui resta nel Fondo, e quanto vale in base a ciò che si sa già al momento dell'ingresso, per esempio il tipo di terapia o di indicazione."
+  - "🔭 Con queste due risposte abbiamo proiettato la spesa un'indicazione alla volta: quelle già nel Fondo, quelle appena rimborsate, quelle che l'horizon scanning vede arrivare (selezionate da un panel di esperti fra 40 indicazioni candidate) e una stima di quelle che oggi nessuno conosce."
+  - "🎥 Il video mostra il risultato del nostro caso base, mese per mese. Anche nel 2028, l'anno di picco, la spesa prevista si ferma a circa 840 milioni su 1.060 stanziati. Sommando i quattro anni, resta inutilizzato circa un euro su tre. È una stima, con tutte le cautele del caso. Ma indica dove guardare."
+  - "E come potremmo fare per riempire quello che manca? Le idee sono tante e qualche scenario lo abbiamo fatto anche noi, nel paper di prossima uscita. Come dicono quelli bravi... stay tuned 😉 (Spoiler: non lo abbiamo regalato a cose fuori dall'innovazione farmaceutica.)"
   video: news/fondo-innovativi-2026-2029.mp4
   poster: news/fondo-innovativi-2026-2029.jpg
   video_w: 1080
