@@ -1,7 +1,8 @@
 # Pagina personale. Fonti: pagina del vecchio sito (ddrug.unimi.it/?p=522, riformulata)
 # e temi di ricerca della presentazione del gruppo (giugno 2026). Da rivedere e approvare
-# dall'interessato. Foto e email personale non inserite: da confermare. Il ruolo viene da persone.yml.
+# dall'interessato. Foto dal vecchio sito, inserita su indicazione di A. Marcellusi (20/11/2026); email da confermare. Il ruolo viene da persone.yml.
 nome: Francesco Cilurzo
+foto: cilurzo-francesco.jpg
 sigillo: ddrug-ring.jpg
 affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
 ambiti:
