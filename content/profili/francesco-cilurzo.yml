@@ -1,0 +1,50 @@
+# Pagina personale. Fonti: pagina del vecchio sito (ddrug.unimi.it/?p=522, riformulata)
+# e temi di ricerca della presentazione del gruppo (giugno 2026). Da rivedere e approvare
+# dall'interessato. Foto e email personale non inserite: da confermare. Il ruolo viene da persone.yml.
+nome: Francesco Cilurzo
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti:
+- Tecnologia farmaceutica
+- Drug delivery
+- Sistemi transdermici
+- Film orodispersibili
+- Nanocarrier
+- Affari regolatori
+link:
+- testo: Pubblicazioni su AIR
+  url: https://air.unimi.it/cris/rp/rp02704
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=57220434509
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/ENG/francesco_cilurzo.pdf
+domande_titolo: Temi di ricerca
+domande:
+- Preparazioni oromucosali, film orodispersibili e forme mucoadesive.
+- Sistemi transdermici e proprietà adesive dei cerotti.
+- Nanocarrier per la somministrazione transdermica e transmucosale.
+- Vettori non virali e nanocarrier bioispirati.
+- Iniettabili a lunga durata d'azione e chemioembolizzazione.
+- Gestione delle variazioni post-marketing dei medicinali.
+approccio_titolo: Progetti in corso
+approccio:
+- titolo: Terapia genica e farmaci a RNA
+  testo: Trasferimento di RNA e DNA mediante lipopoliplessi, nell'ambito del Centro Nazionale per lo sviluppo di terapia genica e farmaci con tecnologia a RNA.
+- titolo: Magnetoforesi e penetrazione cutanea (PRIN 2022)
+  testo: Nanoparticelle superparamagnetiche di ossido di ferro combinate con la magnetoforesi per migliorare la penetrazione dei farmaci attraverso la pelle.
+percorso:
+- dati: Laurea
+  titolo: Farmacia industriale, Università degli Studi di Milano (1995)
+- dati: Dottorato
+  titolo: Tecnologia farmaceutica e affari regolatori, Università di Cagliari
+- dati: 2018-2023
+  titolo: Direttore della Scuola di specializzazione in Farmacia ospedaliera, Università degli Studi di Milano
+- dati: Trasferimento tecnologico
+  titolo: Brevetti depositati, uno spin-off partecipato dall'Università e tre medicinali sul mercato europeo (un cerotto e due film orodispersibili)
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery

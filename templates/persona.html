@@ -15,6 +15,10 @@
         {% endfor %}
       </ul>
     </div>
+    {% if not p.foto %}<figure class="pf-foto pf-mono" aria-hidden="true">
+      <div class="mono">{{ p.nome.split()|map("first")|join("") }}</div>
+      {% if p.sigillo %}<div class="seal"><img src="assets/{{ p.sigillo }}" alt=""></div>{% endif %}
+    </figure>{% endif %}
     {% if p.foto %}<figure class="pf-foto">
       <img class="ph" src="assets/persone/{{ p.foto }}" alt="Ritratto di {{ p.nome }}" width="{{ p.foto_w }}" height="{{ p.foto_h }}">
       {% if p.sigillo %}<div class="seal" aria-hidden="true"><img src="assets/{{ p.sigillo }}" alt=""></div>{% endif %}
@@ -26,7 +30,7 @@
 <main>
 {% if p.domande %}<section id="ricerca">
   <div class="w">
-    <div class="head"><h2>Domande di ricerca</h2></div>
+    <div class="head"><h2>{{ p.domande_titolo or "Domande di ricerca" }}</h2></div>
     <ul class="qcards">
       {% for d in p.domande %}<li>{{ d }}</li>
       {% endfor %}
@@ -35,12 +39,23 @@
 </section>{% endif %}
 
 {% if p.approccio %}<section class="feat" id="approccio">
+  {% if p.approccio_titolo %}<div class="w"><div class="head"><h2>{{ p.approccio_titolo }}</h2></div></div>{% endif %}
   <div class="w duo">
     {% for a in p.approccio %}<div>
       <h2>{{ a.titolo }}</h2>
       <p>{{ a.testo }}</p>
     </div>
     {% endfor %}
+  </div>
+</section>{% endif %}
+
+{% if p.percorso %}<section id="percorso">
+  <div class="w">
+    <div class="head"><h2>Percorso</h2></div>
+    <ul class="inc">
+      {% for v in p.percorso %}<li><span class="label">{{ v.dati }}</span><b>{{ v.titolo }}</b></li>
+      {% endfor %}
+    </ul>
   </div>
 </section>{% endif %}
 
@@ -77,7 +92,7 @@
 <script type="application/ld+json">
 {{ {"@context": "https://schema.org", "@type": "Person", "name": p.nome, "jobTitle": p.ruolo,
     "affiliation": {"@type": "Organization", "name": p.affiliazione or "Università degli Studi di Milano"},
-    "email": p.email, "knowsAbout": p.ambiti or [], "sameAs": p.link|map(attribute="url")|list}|tojson }}
+    "email": p.email or None, "knowsAbout": p.ambiti or [], "sameAs": p.link|map(attribute="url")|list}|tojson }}
 </script>
 <script>
 document.querySelectorAll("[data-copia]").forEach(b => b.addEventListener("click", async () => {
