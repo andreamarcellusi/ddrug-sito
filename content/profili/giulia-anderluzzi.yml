@@ -1,0 +1,33 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Giulia Anderluzzi
+foto: anderluzzi-giulia.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Terapia genica, RNA autoamplificante, Nanoparticelle, Microfluidica]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=57191972298
+presentazione:
+- Si è laureata in Chimica e tecnologia farmaceutiche all'Università di Padova nel 2016, con una tesi svolta in collaborazione con la Aston University di Birmingham sull'uso della microfluidica per produrre nanoparticelle caricate con proteine. Nel 2019 ha conseguito il dottorato alla University of Strathclyde di Glasgow, in collaborazione con GlaxoSmithKline (Siena), studiando nanoparticelle cationiche come sistemi di rilascio per RNA autoamplificante.
+- Dal 2020 è stata post-doc all'Università Vita-Salute San Raffaele, su nanoparticelle decorate con citochine ricombinanti per la terapia oncologica. Dal 2023 è all'Università degli Studi di Milano, dove sviluppa nuove piattaforme di rilascio per la terapia genica.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Vettori non virali e nanocarrier bioispirati.
+percorso:
+- dati: 2016
+  titolo: Laurea in Chimica e tecnologia farmaceutiche, Università di Padova
+- dati: 2019
+  titolo: Dottorato, University of Strathclyde (Glasgow, UK)
+- dati: Dal 2020
+  titolo: Post-doc, Università Vita-Salute San Raffaele
+- dati: Dal 2023
+  titolo: Università degli Studi di Milano
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery

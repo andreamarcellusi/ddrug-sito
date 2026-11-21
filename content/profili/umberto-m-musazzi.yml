@@ -1,0 +1,34 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Umberto M. Musazzi
+foto: musazzi-umberto.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Affari regolatori, Sistemi dermici e transdermici, Film orodispersibili, Controllo qualità, Dispositivi medici]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=55925037900
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/ENG/umberto_musazzi.pdf
+presentazione:
+- Professore associato al Dipartimento di Scienze Farmaceutiche. Ha competenze nella progettazione e caratterizzazione di sistemi di rilascio dermici, transdermici, oromucosali e orodispersibili. Nel 2012 è stato visiting graduate student alla University of Missouri, Kansas City, dove ha studiato le criticità della somministrazione di farmaci alla coclea nel trattamento dei disturbi dell'orecchio interno.
+- La ricerca integra lo sviluppo di formulazioni e processi produttivi innovativi con il quadro regolatorio dei prodotti per la salute, per razionalizzare la progettazione di medicinali, dispositivi medici, cosmetici e integratori e migliorare gli standard regolatori del loro controllo di qualità.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Preparazioni oromucosali.
+- Sistemi transdermici.
+- Nanocarrier per la somministrazione transdermica e transmucosale.
+- Gestione delle variazioni post-marketing.
+percorso:
+- dati: 2014
+  titolo: Dottorato in Tecnologia e legislazione farmaceutiche
+- dati: 2012
+  titolo: Visiting graduate student, University of Missouri, Kansas City (USA)
+ruoli:
+- ente: dDRUG
+  ruolo: Linee Drug Delivery e Regulatory Affairs
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#ricerca

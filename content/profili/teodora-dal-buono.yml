@@ -1,0 +1,28 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Teodora Dal Buono
+foto: dal-buono-teodora.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Nanoparticelle lipidiche, Acidi nucleici, Editing genico, CRISPR, Nanomedicina]
+presentazione:
+- Ingegnera biomedica, si interessa di nanomedicina per il rilascio di farmaci e geni. Ha conseguito la laurea triennale alla Sapienza Università di Roma, con una tesi su una piattaforma lab-on-chip per la PCR in tempo reale, e la magistrale al Politecnico di Milano, con un periodo di ricerca al Diabetes Research Institute della University of Miami su nanoparticelle polimeriche per l'immunoterapia locale nel trapianto di cellule beta pancreatiche nel diabete di tipo 1.
+- Nel 2025 ha iniziato il dottorato in Scienze farmaceutiche all'Università degli Studi di Milano. La ricerca riguarda la progettazione di nanoparticelle lipidiche per la veicolazione di acidi nucleici e per l'editing genico con tecnologia CRISPR.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Vettori non virali e nanocarrier bioispirati.
+percorso:
+- dati: Laurea triennale
+  titolo: Ingegneria biomedica, Sapienza Università di Roma
+- dati: Laurea magistrale
+  titolo: Politecnico di Milano, con periodo di ricerca alla University of Miami
+- dati: Dal 2025
+  titolo: Dottorato in Scienze farmaceutiche, Università degli Studi di Milano
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery

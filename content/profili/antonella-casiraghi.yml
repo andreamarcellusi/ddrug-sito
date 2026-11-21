@@ -1,0 +1,33 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Antonella Casiraghi
+foto: casiraghi-antonella.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Somministrazione transdermica, Permeabilità cutanea, Semisolidi, Preparazioni galeniche, Cosmetici]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=6603073548
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/ENG/antonella_casiraghi.pdf
+presentazione:
+- Dal 2006 al Dipartimento di Scienze Farmaceutiche, dove è oggi professoressa associata. Fin dall'inizio si è occupata della fattibilità del rilascio transdermico di nuove molecole e di come aumentare la diffusione passiva di quelle già note, con il metodo delle celle di diffusione su membrane e formulazioni diverse.
+- In seguito l'interesse si è esteso alla permeabilità di molecole vegetali a uso medicinale o cosmetico e agli studi di preformulazione e formulazione, prima di cerotti monostrato e poi di semisolidi. Una parte dell'attività mira a migliorare le preparazioni galeniche in farmacia, con studi su formulazioni adatte all'uso medico della Cannabis.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Sistemi transdermici.
+- Nanocarrier per la somministrazione transdermica e transmucosale.
+- Cosmetici.
+percorso:
+- dati: 2000
+  titolo: Dottorato in Tecnologia farmaceutica e affari regolatori, Università di Cagliari
+- dati: Dal 2006
+  titolo: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery

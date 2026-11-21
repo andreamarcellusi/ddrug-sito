@@ -1,0 +1,37 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Silvia Franzè
+foto: franze-silvia.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Nanocarrier lipidici, Liposomi, Acidi nucleici, Somministrazione transdermica, Drug delivery]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=55418940000
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/silvia_franze.pdf
+presentazione:
+- Professoressa associata di Drug delivery e scienze regolatorie al Dipartimento di Scienze Farmaceutiche. Nel 2013 ha trascorso nove mesi come visiting scholar all'Institut Galien Paris-Sud (CNRS, Université Paris-Sud), lavorando su liposomi per il trattamento del tumore prostatico.
+- Dopo il dottorato ha unito questa esperienza alla formazione sul rilascio transdermico, progettando liposomi deformabili in grado di veicolare attraverso la pelle farmaci poco permeabili e studiando come stabilizzarli. Il suo interesse principale resta la progettazione di nanocarrier lipidici per veicolare molecole terapeutiche, compresi gli acidi nucleici, attraverso le barriere biologiche.
+- È responsabile di un progetto PRIN 2022 sulla progettazione di nanoparticelle simili a vescicole extracellulari per la terapia oncologica e partecipa a un progetto PNRR del Centro Nazionale 3, spoke 8. Fa parte del consiglio direttivo del Controlled Release Society Italy Chapter.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Vettori non virali e nanocarrier bioispirati.
+- Nanocarrier per la somministrazione transdermica e transmucosale.
+- Iniettabili a lunga durata d'azione e chemioembolizzazione.
+percorso:
+- dati: 2015
+  titolo: Dottorato in Chimica del farmaco, Università degli Studi di Milano
+- dati: 2013
+  titolo: Visiting scholar, Institut Galien Paris-Sud, CNRS UMR 8612
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery
+incarichi:
+- ruolo: Consiglio direttivo
+  ente: Controlled Release Society, Italy Chapter

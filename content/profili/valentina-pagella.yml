@@ -1,0 +1,23 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Valentina Pagella
+foto: pagella-valentina.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Terapie digitali, Dispositivi medici digitali, Affari regolatori, Accesso alle tecnologie sanitarie]
+presentazione:
+- Si è laureata in Scienze farmaceutiche all'Università degli Studi di Milano con una tesi sullo sviluppo di terapie digitali e di dispositivi medici digitali gestiti dal paziente. Oggi frequenta un dottorato industriale e intersettoriale per l'innovazione.
+- La ricerca esplora approcci terapeutici basati su dispositivi medici digitali. Analizza il panorama europeo delle terapie digitali e i quadri regolatori e amministrativi di altri Paesi per proporre un sistema che faciliti l'ingresso di queste tecnologie in Italia.
+percorso:
+- dati: Laurea
+  titolo: Scienze farmaceutiche, Università degli Studi di Milano
+- dati: Dottorato
+  titolo: Dottorato industriale e intersettoriale per l'innovazione
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Regulatory Affairs
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#regulatory-affairs

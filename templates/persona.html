@@ -28,7 +28,15 @@
 {% if p.motto_a %}{{ scorre(p.motto_a, p.motto_b) }}{% endif %}
 
 <main>
-{% if p.domande %}<section id="ricerca">
+{% if p.presentazione %}<section id="profilo">
+  <div class="w bio">
+    <div class="head"><h2>Profilo</h2></div>
+    {% for t in p.presentazione %}<p>{{ t }}</p>
+    {% endfor %}
+  </div>
+</section>{% endif %}
+
+{% if p.domande %}<section id="ricerca"{% if p.presentazione %} class="feat"{% endif %}>
   <div class="w">
     <div class="head"><h2>{{ p.domande_titolo or "Domande di ricerca" }}</h2></div>
     <ul class="qcards">

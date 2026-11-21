@@ -1,0 +1,30 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Paolo Rocco
+foto: rocco-paolo.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Affari regolatori, Medicinali biotecnologici, Terapie avanzate, Farmaci complessi non biologici, Dispositivi medici]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=37117881800
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/ENG/paolo_rocco.pdf
+presentazione:
+- Professore a contratto all'Università degli Studi di Milano, dove si è laureato in Chimica (1996) e in Farmacia (2007) e ha conseguito il dottorato in Chimica del farmaco (2015). Insegna nei corsi "Protein engineering, drug delivery and regulatory aspects" e "Regulatory aspects in toxicology".
+- La ricerca riguarda soprattutto gli aspetti regolatori dei medicinali complessi (biotecnologici, medicinali per terapie avanzate e farmaci complessi non biologici) e dei dispositivi medici, in particolare le combinazioni farmaco-dispositivo e i dispositivi a base di sostanze.
+percorso:
+- dati: 1996
+  titolo: Laurea in Chimica, Università degli Studi di Milano
+- dati: 2007
+  titolo: Laurea in Farmacia, Università degli Studi di Milano
+- dati: 2015
+  titolo: Dottorato in Chimica del farmaco, Università degli Studi di Milano
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Regulatory Affairs
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#regulatory-affairs

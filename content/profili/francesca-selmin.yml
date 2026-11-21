@@ -1,0 +1,37 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Francesca Selmin
+foto: selmin-francesca.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Drug delivery, Sistemi parenterali complessi, Preparazioni oromucosali, Rilascio controllato, Farmacia ospedaliera]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=6507337501
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/ENG/francesca_selmin.pdf
+presentazione:
+- Professoressa associata di Drug delivery al Dipartimento di Scienze Farmaceutiche dal 2018 e, dal 2023, direttrice della Scuola di specializzazione in Farmacia ospedaliera. Dopo il dottorato è stata visiting scientist al College of Pharmacy della University of Kentucky, nel laboratorio del Dr. DeLuca, dove ha approfondito la progettazione e la caratterizzazione di sistemi di rilascio biodegradabili.
+- Le sue competenze riguardano i sistemi parenterali complessi e i sistemi di rilascio oromucosali. Si occupa anche dello sviluppo di saggi non compendiali per caratterizzare i sistemi a rilascio controllato.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Preparazioni oromucosali.
+- Iniettabili a lunga durata d'azione e chemioembolizzazione.
+- Gestione delle variazioni post-marketing.
+percorso:
+- dati: 2001
+  titolo: Dottorato in Chimica del farmaco, Università degli Studi di Milano
+- dati: Visiting scientist
+  titolo: College of Pharmacy, University of Kentucky (USA)
+- dati: Dal 2018
+  titolo: Professoressa associata di Drug delivery, Università degli Studi di Milano
+- dati: Dal 2023
+  titolo: Direttrice della Scuola di specializzazione in Farmacia ospedaliera
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery

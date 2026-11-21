@@ -1,0 +1,29 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Martina Managò
+foto: manago-martina.jpg
+sigillo: ddrug-ring-he.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Farmacoeconomia, Modelli di valutazione economica, Prezzo e rimborso, Market access]
+presentazione:
+- Da marzo 2025 è al Dipartimento di Scienze Farmaceutiche dell'Università degli Studi di Milano. Ha conseguito la laurea magistrale in Economia sanitaria alla Sapienza Università di Roma, con un indirizzo in farmacoeconomia.
+- I suoi interessi di ricerca sono i modelli di valutazione economica e le pratiche di prezzo e rimborso. Ha esperienza professionale nella consulenza, su temi che riguardano strutture pubbliche e private del Servizio sanitario nazionale, e nell'industria farmaceutica, nell'area Market Access e Pricing.
+percorso:
+- dati: Laurea magistrale
+  titolo: Economia sanitaria, Sapienza Università di Roma
+- dati: Dal 2025
+  titolo: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Health Economics
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring-he.jpg
+  tono: chiaro
+  link: index.html#health-economics
+- ente: HETA Lab
+  ruolo: Dottoranda
+  nota: Health Economics and Technology Assessment Laboratory
+  logo: logo-heta-lab.jpg
+  tono: heta
+  link: heta-lab.html

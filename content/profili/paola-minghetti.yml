@@ -1,0 +1,45 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Paola Minghetti
+foto: minghetti-paola.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Tecnologia farmaceutica, Affari regolatori, Sistemi transdermici, Preparazioni galeniche, Legislazione farmaceutica]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=7005774678
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/ENG/paola_minghetti.pdf
+presentazione:
+- Professoressa ordinaria di Tecnologia e normativa farmaceutiche all'Università degli Studi di Milano. Dall'ottobre 2023 dirige il Dipartimento di Scienze Farmaceutiche; dal 2020 al 2023 è stata Preside della Facoltà di Farmacia. Insegna nella Scuola di specializzazione in Farmacia ospedaliera.
+- La ricerca riguarda i sistemi di rilascio transdermici e buccali, l'elaborazione dottrinale della normativa nazionale ed europea su produzione e commercio di medicinali, dispositivi medici e prodotti per la salute, e le preparazioni magistrali nelle farmacie ospedaliere e di comunità.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Preparazioni oromucosali.
+- Sistemi transdermici.
+- Cosmetici.
+- Gestione delle variazioni post-marketing.
+percorso:
+- dati: Formazione
+  titolo: Laurea in Farmacia e in Farmacia industriale (con lode), dottorato in Scienze farmaceutiche
+- dati: Dal 2023
+  titolo: Direttrice del Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+- dati: 2020-2023
+  titolo: Preside della Facoltà di Farmacia, Università degli Studi di Milano
+ruoli:
+- ente: dDRUG
+  ruolo: Linee Drug Delivery e Regulatory Affairs
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#ricerca
+incarichi:
+- ruolo: Esperta
+  ente: Farmacopea Ufficiale Italiana
+- ruolo: Componente
+  ente: Segreteria tecnico-scientifica per la valutazione e l'autorizzazione, AIFA
+- ruolo: Componente
+  ente: Gruppo di valutazione e autorizzazione dei medicinali veterinari, Ministero della Salute
+- ruolo: Presidente
+  ente: Società Italiana Farmacisti Preparatori (SIFAP)

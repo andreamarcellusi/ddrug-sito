@@ -1,0 +1,27 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Chiara Gennari
+foto: gennari-chiara.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Sistemi bioadesivi, Cerotti transdermici, Forme mucoadesive, Permeabilità cutanea e transmucosale]
+link:
+- testo: Profilo Scopus
+  url: https://www.scopus.com/authid/detail.uri?authorId=23670435100
+- testo: Curriculum vitae
+  url: https://work.unimi.it/chiedove/cv/ENG/chiara_gennari.pdf
+presentazione:
+- Professoressa associata al Dipartimento di Scienze Farmaceutiche, dove insegna Tecnologia e legislazione farmaceutiche e Produzione dei medicinali biotecnologici.
+- La ricerca riguarda lo studio e la progettazione di sistemi di rilascio bioadesivi, come cerotti transdermici e forme mucoadesive, e la valutazione della permeabilità cutanea e transmucosale di medicinali, cosmetici e dispositivi medici. Ha studiato anche il phage display come tecnica di screening in vitro per individuare peptidi capaci di attraversare le membrane biologiche.
+- Ha coordinato due progetti finanziati dall'Ateneo, "Peptide-transferosome conjugate", nanocarrier transdermico per veicolare macromolecole attraverso la pelle (Piano di sviluppo 2014, linea B), e "Film forming formulations for topical delivery of drugs" (Piano di sostegno alla ricerca 2015-2017, linea 2).
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Sistemi transdermici.
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery

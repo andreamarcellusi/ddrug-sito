@@ -1,0 +1,26 @@
+# Pagina personale. Fonte: pagina del vecchio sito ddrug.unimi.it/profilo/ (testo tradotto e riformulato,
+# informazioni superate omesse) e temi della presentazione del gruppo (giugno 2026). Foto dal vecchio sito,
+# inserita su indicazione di A. Marcellusi (21/11/2026). Da rivedere e approvare dall'interessato. Ruolo da persone.yml.
+nome: Viola Bertolotti
+foto: bertolotti-viola.jpg
+sigillo: ddrug-ring.jpg
+affiliazione: Dipartimento di Scienze Farmaceutiche, Università degli Studi di Milano
+ambiti: [Liofilizzazione, Terapie avanzate, Idrogel, Rilascio prolungato]
+presentazione:
+- Dottoranda in Scienze farmaceutiche all'Università degli Studi di Milano. Si è laureata in Chimica e tecnologia farmaceutiche nel marzo 2023 con una tesi su idrogel nanocompositi biocompatibili per il rilascio prolungato di farmaci, svolta all'Istituto Mario Negri sotto la supervisione della Prof.ssa Luisa De Cola e del Dr. Jonathan Michael Zuidema.
+- Il progetto di dottorato studia la fattibilità della liofilizzazione di terapie avanzate.
+domande_titolo: Temi di ricerca nel dDRUG
+domande:
+- Vettori non virali e nanocarrier bioispirati.
+percorso:
+- dati: 2023
+  titolo: Laurea in Chimica e tecnologia farmaceutiche, Università degli Studi di Milano
+- dati: Dottorato
+  titolo: Scienze farmaceutiche, Università degli Studi di Milano
+ruoli:
+- ente: dDRUG
+  ruolo: Linea Drug Delivery
+  nota: Gruppo di ricerca Drug Delivery & Regulatory Affairs
+  logo: ddrug-ring.jpg
+  tono: chiaro
+  link: index.html#drug-delivery
